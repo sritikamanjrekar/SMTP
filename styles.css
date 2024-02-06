@@ -1,0 +1,133 @@
+/* Reset some default styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Add CSS for the containers holding the model-viewer elements */
+
+.model-viewer-container {
+  /* Set the display property to inline-block for inline layout with block-level box properties */
+  display: inline-block;
+
+  /* Set the width of the container */
+  width: 30%;
+  /* Adjust the width as needed */
+
+  /* Add margin to create spacing around the container */
+  margin: 10px;
+  /* Add spacing between the containers */
+}
+
+
+
+
+/* Style the model-viewer elements if necessary */
+
+model-viewer {
+  /* Set the width of the model-viewer element to 100% */
+  width: 100%;
+
+  /* Set the height of the model-viewer element */
+  height: 300px;
+  /* Adjust the height as needed */
+}
+
+
+ /* Apply basic styles to the button with the class 'transparent-button' */
+
+ .transparent-button {
+  /* Set the background color of the button to transparent */
+  background-color: white;
+
+  /* Set the text color of the button */
+  color: rgb(89, 255, 0);
+  /* Set the text color */
+
+  /* Add a border to the button with a 2px width and the specified color */
+  border: 2px solid rgb(89, 255, 0);
+  /* Set the border color */
+
+  /* Set the cursor to a pointer to indicate interactivity */
+  cursor: pointer;
+
+  /* Add a smooth transition effect for background color and text color changes */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Add a smooth transition effect */
+
+  /* Apply the 'rainbow' animation with a duration of 3s and infinite repeat */
+  animation: rainbow 3s infinite;
+  /* Add rainbow animation */
+  /* Add rainbow animation */
+}
+
+
+/* Define a keyframe animation named 'rainbow' */
+
+@keyframes rainbow {
+
+  /* Keyframe at 0% */
+  0% {
+      /* Set the color and border color to red */
+      color: red;
+      border-color: red;
+  }
+
+  /* Keyframe at 16.666% */
+  16.666% {
+      /* Set the color and border color to orange */
+      color: orange;
+      border-color: orange;
+  }
+
+  /* Keyframe at 33.333% */
+  33.333% {
+      /* Set the color and border color to yellow */
+      color: yellow;
+      border-color: yellow;
+  }
+
+  /* Keyframe at 50% */
+  50% {
+      /* Set the color and border color to green */
+      color: green;
+      border-color: green;
+  }
+
+  /* Keyframe at 66.666% */
+  66.666% {
+      /* Set the color and border color to blue */
+      color: blue;
+      border-color: blue;
+  }
+
+  /* Keyframe at 83.333% */
+  83.333% {
+      /* Set the color and border color to indigo */
+      color: indigo;
+      border-color: indigo;
+  }
+
+  /* Keyframe at 100% */
+  100% {
+      /* Set the color and border color to violet */
+      color: violet;
+      border-color: violet;
+  }
+}
+
+/* Change the background color and text color on hover for elements with the class 'transparent-button' */
+
+.transparent-button:hover {
+  /* Set the background color to white on hover */
+  background-color: #ffffff;
+  /* Set the background color on hover */
+
+  /* Set the text color to black on hover */
+  color: #000000;
+  /* Set the text color on hover */
+}
+
+
+

@@ -1,0 +1,29 @@
+<!-- pdf_viewer.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Viewer</title>
+  <!-- Include PDF.js viewer stylesheet -->
+  <link rel="stylesheet" href="https://mozilla.github.io/pdf.js/web/viewer.css">
+</head>
+<body>
+
+  <!-- Container for the PDF viewer -->
+  <!-- <div id="viewerContainer"> -->
+    <iframe id="pdfViewer" width="100%" height="950%" src="Understanding RARP (Reverse Address Resolution Protocol).pdf"></iframe>
+  <!-- </div> -->
+
+  <script>
+    // Include PDF.js library
+    // The workerSrc property should be specified to the location of the worker file
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+  </script>
+
+  <!-- Include PDF.js viewer script -->
+  <script src="https://mozilla.github.io/pdf.js/web/viewer.js"></script>
+
+</body>
+</html>
