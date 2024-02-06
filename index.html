@@ -12,8 +12,8 @@
   <link type="text/css" href="./styles.css" rel="stylesheet" />
 
 
-<style>
-  .connector {
+  <style>
+    .connector {
       /* Set the width of the connector element */
       width: 18.7%;
       /* Full width for the horizontal line */
@@ -34,14 +34,101 @@
       /* Adjust the left margin as needed */
 
       /* Set the top position to separate it from the models */
-      top: 42.5%;
+      top: 41.7%;
       /* Adjust the top position as needed */
 
       /* Set the z-index to 1 for layering, ensuring it appears above other elements */
       z-index: 1;
       /* Adjust the z-index as needed */
     }
-</style>
+
+    .connector1 {
+      /* Set the width of the connector element */
+      width: 23.7%;
+      /* Full width for the horizontal line */
+
+      /* Set the height of the connector line */
+      height: 4px;
+      /* Adjust the height of the connector line */
+
+      /* Set the background color of the connector line */
+      background-color: red;
+      /* Adjust the color as needed */
+
+      /* Set the position property to absolute for precise positioning */
+      position: absolute;
+
+      /* Set the left margin to position the connector horizontally */
+      margin-left: 52%;
+      /* Adjust the left margin as needed */
+
+      /* Set the top position to separate it from the models */
+      top: 42.7%;
+      /* Adjust the top position as needed */
+
+      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
+      z-index: 1;
+      /* Adjust the z-index as needed */
+    }
+
+    .vertical-line {
+      /* Set the height of the vertical line */
+      height: 315px;
+      /* Adjust the height as needed */
+
+
+      /* Set the left margin to position the vertical line to the left side */
+      margin-left: 48%;
+      /* Adjust the left margin as needed */
+
+      /* Set the top margin to position the vertical line up from the top */
+      margin-top: -8.9%;
+      /* Adjust the top margin as needed */
+
+      /* Set the position property to absolute for precise positioning */
+      position: absolute;
+      /* Adjust the margin as needed */
+
+      /* Change the color of the dashed border */
+      border-color: green;
+      /* Adjust the border color as needed */
+
+      /* Define the border style as dashed */
+      border-style: solid;
+
+      z-index: 0;
+
+    }
+
+    .salnted-line {
+      /* Set the height of the vertical line */
+      height: 500px;
+      /* Adjust the height as needed */
+
+      transform: rotate(-60deg);
+      /* Set the left margin to position the vertical line to the left side */
+      margin-left: 65%;
+      /* Adjust the left margin as needed */
+
+      /* Set the top margin to position the vertical line up from the top */
+      margin-top: -17.3%;
+      /* Adjust the top margin as needed */
+
+      /* Set the position property to absolute for precise positioning */
+      position: absolute;
+      /* Adjust the margin as needed */
+
+      /* Change the color of the dashed border */
+      border-color: purple;
+      /* Adjust the border color as needed */
+
+      /* Define the border style as dashed */
+      border-style: solid;
+
+      z-index: 0;
+
+    }
+  </style>
 
 
 </head>
@@ -63,7 +150,8 @@
       <h1>Simple Mail Transfer Protocol (SMTP)</h1>
       <!-- Heading element -->
       <button class="btn btn-warning btn-sm" onclick="openPdfPPT()">About SMTP</button>
-      &ensp;&ensp;<button class="btn btn-primary btn-sm" onclick="openPdfDocs()">How To Use SMTP</button>
+      &ensp;&ensp;<button class="btn btn-primary btn-sm" onclick="openPdfDocs()">How To Use SMTP Document</button>
+      &ensp;&ensp;<button class="btn btn-danger btn-sm" onclick="openVideo()">How To Use SMTP Video</button>
 
 
 
@@ -86,17 +174,20 @@
 
 
     <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1" style="">
+      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+      style="z-index: 2;">
       <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
         data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
         data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-        data-bs-toggle="modal" data-bs-target="#PC-1IpAddress">
+        data-bs-toggle="modal" data-bs-target="#PC1Email">
         <div class="HotspotAnnotation">PC-1</div>
       </button>
 
     </model-viewer>
 
   </div>
+
+
 
   <div class="connector" data-bs-toggle="modal" data-bs-target="#Connector"></div>
 
@@ -105,7 +196,7 @@
 
 
     <model-viewer src="switch.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
-      shadow-intensity="1">
+      shadow-intensity="1" style="">
       <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
         data-position="-17.82355475016235m 6.123874902725213m -167.32013377219792m" data-normal="0m 1m 0m"
         data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Switch">
@@ -116,6 +207,10 @@
     </model-viewer>
 
   </div>
+
+
+  <div class="connector1" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+
 
   <div class="model-viewer-container">
     <model-viewer src="server_racking_system.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
@@ -133,7 +228,9 @@
 
   </div>
 
-  
+  <div class="vertical-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+  <div class="salnted-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+
 
 
   <div class="model-viewer-container">
@@ -141,11 +238,12 @@
 
 
     <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1" style="">
+      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+      style="margin-left: 100%;">
       <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
         data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
         data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-        data-bs-toggle="modal" data-bs-target="#PC-2IpAddress">
+        data-bs-toggle="modal" data-bs-target="#PC2Email">
         <div class="HotspotAnnotation">PC-2</div>
       </button>
 
@@ -158,11 +256,12 @@
 
 
     <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1" style="">
+      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+      style="margin-left: 100%;">
       <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
         data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
         data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-        data-bs-toggle="modal" data-bs-target="#PC-3IpAddress">
+        data-bs-toggle="modal" data-bs-target="#PC3Email">
         <div class="HotspotAnnotation">PC-3</div>
       </button>
 
@@ -170,129 +269,338 @@
 
   </div>
 
-  <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Switch 2950-24</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
+  <div id="emailContainer" style="margin-left: 5%;margin-top: -22%;">
+    <div id="emailList">
+      <ul>
+        <h6>Inbox of PC-1</h6>
+        <li><a href="#" class="emailLink">Email 1</a></li>
+        <li><a href="#" class="emailLink">Email 2</a></li>
+        <li><a href="#" class="emailLink">Email 3</a></li>
+      </ul>
+    </div>
 
-          <img src="switch295-24.PNG" alt="switch2950-24">
-          <img src="switch.jpg" alt="switch2950-24">
+    <div id="emailDetails" style="display: none;">
+      <p><strong>From:</strong> <span id="emailFrom"></span></p>
+      <p><strong>Subject:</strong> <span id="emailSubject"></span></p>
+      <p><strong>Body:</strong></p>
+      <p id="emailBody"></p>
+    </div>
 
+    <div id="emailContainer" style="margin-left: 35%;margin-top: 18%;">
+      <div id="emailList">
+        <h6>Inbox of PC-2</h6>
+        <ul>
+          <li><a href="#" class="emailLink">Email 1</a></li>
+          <li><a href="#" class="emailLink">Email 2</a></li>
+          <li><a href="#" class="emailLink">Email 3</a></li>
+        </ul>
+      </div>
+  
+      <div id="emailDetails" style="display: none;">
+        <p><strong>From:</strong> <span id="emailFrom"></span></p>
+        <p><strong>Subject:</strong> <span id="emailSubject"></span></p>
+        <p><strong>Body:</strong></p>
+        <p id="emailBody"></p>
+      </div>
+
+
+      <div id="emailContainer" style="margin-left: 50%;margin-top:-10%;">
+        <div id="emailList">
+          <h6>Inbox of PC-3</h6>
+          <ul>
+            <li><a href="#" class="emailLink">Email 1</a></li>
+            <li><a href="#" class="emailLink">Email 2</a></li>
+            <li><a href="#" class="emailLink">Email 3</a></li>
+          </ul>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+    
+        <div id="emailDetails" style="display: none;">
+          <p><strong>From:</strong> <span id="emailFrom"></span></p>
+          <p><strong>Subject:</strong> <span id="emailSubject"></span></p>
+          <p><strong>Body:</strong></p>
+          <p id="emailBody"></p>
+        </div>
+
+
+
+    <div class="modal fade" id="PC1Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">PC-1 Email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="subject-name" class="col-form-label">Subject:</label>
+                <input type="text" class="form-control" id="subject-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary" data-bs-target="#PC-1IpAddress" data-bs-toggle="modal">More
+              Info</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <div class="modal fade" id="PC2Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">PC-2 Email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
 
-  <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-1</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.1
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="subject-name" class="col-form-label">Subject:</label>
+                <input type="text" class="form-control" id="subject-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
 
-  <div class="modal fade" id="PC-2IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-2</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.2
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary" data-bs-target="#PC-2IpAddress" data-bs-toggle="modal">More
+              Info</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
-  <div class="modal fade" id="PC-3IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-3</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.3
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="SMTPServerIpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">SMTP Server</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          IP Address > 192.168.11.4
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+    <div class="modal fade" id="PC3Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">PC-3 Email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="subject-name" class="col-form-label">Subject:</label>
+                <input type="text" class="form-control" id="subject-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary" data-bs-target="#PC-3IpAddress" data-bs-toggle="modal">More
+              Info</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Switch 2950-24</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+
+            <img src="switch295-24.PNG" alt="switch2950-24">
+            <img src="switch.jpg" alt="switch2950-24">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-1</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            IP Address > 192.168.11.1<br>
+            Email Address > user1@email.com
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            <button class="btn btn-primary" data-bs-target="#PC1Email" data-bs-toggle="modal">Back</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
-  <script>
-    function openPdfPPT() {
-      window.open('openPdfPPT.html', '_blank');
-    }
+    <div class="modal fade" id="PC-2IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-2</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            IP Address > 192.168.11.2<br>
+            Email Address > user2@email.com
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            <button class="btn btn-primary" data-bs-target="#PC2Email" data-bs-toggle="modal">Back</button>
 
-    function openPdfDocs() {
-      window.open('openPdfDocs.html', '_blank');
-    }
-  </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="PC-3IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-3</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            IP Address > 192.168.11.3<br>
+            Email Address > user3@email.com
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            <button class="btn btn-primary" data-bs-target="#PC3Email" data-bs-toggle="modal">Back</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="SMTPServerIpAddress" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">SMTP Server</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            IP Address > 192.168.11.4<br>
+            Domain Name > email.com
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script>
+      function openPdfPPT() {
+        window.open('openPdfPPT.html', '_blank');
+      }
+
+      function openPdfDocs() {
+        window.open('openPdfDocs.html', '_blank');
+      }
+
+
+      // Get all email links
+      const emailLinks = document.querySelectorAll(".emailLink");
+
+      
+      // Attach click event listener to each email link
+      emailLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+
+          const emailDetails = document.getElementById("emailDetails");
+          const isHidden = emailDetails.style.display === "none";
+
+          // Simulated data of received email
+          const email = {
+            from: "user2@email.com",
+            subject: "Hello from User 2",
+            body: "This is a message from User 2."
+          };
+
+          // Update the email details with received email data
+          document.getElementById("emailFrom").textContent = email.from;
+          document.getElementById("emailSubject").textContent = email.subject;
+          document.getElementById("emailBody").textContent = email.body;
+
+          // Toggle the visibility of the email details container
+          emailDetails.style.display = isHidden ? "block" : "none";
+        });
+      });
+
+
+
+    </script>
 
 
 
 
 
-  <!-- Loads <model-viewer> for browsers: -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
 
-  <!-- Includes a JavaScript module for 3D model viewing -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- Includes a JavaScript module for 3D model viewing -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-  <!-- Includes the Bootstrap JavaScript library from a CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+    <!-- Includes the Bootstrap JavaScript library from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
 
 
 </body>

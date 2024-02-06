@@ -23,6 +23,25 @@ body {
 
 
 
+#emailDetails {
+  background-color: #c4c4c4;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+#emailDetails p {
+  margin: 5px 0;
+}
+
+#emailLink {
+  color: blue;
+  cursor: pointer;
+}
+
+
+
 /* Style the model-viewer elements if necessary */
 
 model-viewer {
