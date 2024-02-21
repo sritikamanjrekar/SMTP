@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Simple Mail Transfer Protocol</title>
+  <title>Simple Mail Transfer Protocol (SMTP)</title>
   <meta charset="utf-8">
   <meta name="description" content="&lt;model-viewer&gt; template">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -128,8 +128,21 @@
       z-index: 0;
 
     }
+
+    /* Define animation */
+    @keyframes colorChange {
+      0% { color: #116400; }
+      50% { color: #2bff00; }
+      100% { color: #116400; }
+  }
+
+  /* Apply animation to the span */
+  h1 span:hover {
+      animation: colorChange 5s infinite;
+  }
   </style>
 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
 
 </head>
 
@@ -140,6 +153,22 @@
 
   <br> <!-- Line break element -->
 
+  <div>
+    <a href="https://sritikamanjrekar.github.io/ARNetExperince/">
+      <img src="logo.png" alt="ARNetExperince" style="width: 12%;margin-left: 2%;"></a>
+    <div style="margin-left: 86%;margin-top: -3%;">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://sritikamanjrekar.github.io/SMTP/" target="_blank"><i
+          class="ri-facebook-fill btn btn-outline-primary" style="border-radius: 50%;"></i></a>
+      <a href="https://twitter.com/intent/tweet?url=https://sritikamanjrekar.github.io/SMTP/&text=Check%20out%20this%20awesome%20website!"
+        target="_blank"><i class="ri-twitter-fill  btn btn-outline-success"
+          style="border-radius: 50%;margin-left: 3%;"></i></a>
+      <a href="https://www.linkedin.com/shareArticle?url=https://sritikamanjrekar.github.io/SMTP/" target="_blank"><i
+          class="ri-linkedin-fill btn btn-outline-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
+      <a href="" target="_blank"><i class="ri-instagram-line btn btn-outline-danger"
+          style="border-radius: 50%;margin-left: 3%;"></i></a>
+
+    </div>
+
   <!-- Container div -->
   <div>
 
@@ -147,11 +176,11 @@
     <center>
 
       <!-- Heading element with text "File Transfer Protocols" -->
-      <h1>Simple Mail Transfer Protocol (SMTP)</h1>
+      <h1 style="margin-top: -2%;"><b><span style="letter-spacing: 0.5cqmin;color: #116400;">Simple Mail Transfer Protocol (SMTP)</span></b></h1>
       <!-- Heading element -->
-      <button class="btn btn-warning btn-sm" onclick="openPdfPPT()">About SMTP</button>
-      &ensp;&ensp;<button class="btn btn-primary btn-sm" onclick="openPdfDocs()">How To Use SMTP Document</button>
-      &ensp;&ensp;<button class="btn btn-danger btn-sm" onclick="openVideo()">How To Use SMTP Video</button>
+      <button class="btn btn-outline-success btn-sm" onclick="openPdfPPT()">About SMTP</button>
+      &ensp;&ensp;<button class="btn btn-outline-primary btn-sm" onclick="openPdfDocs()">How To Use SMTP Document</button>
+      &ensp;&ensp;<button class="btn btn-outline-danger btn-sm" onclick="openVideo()">How To Use SMTP Video</button>
 
 
 
@@ -163,9 +192,10 @@
   </div>
   <!-- End of container div -->
 
-  <hr> <!-- Horizontal rule element -->
+  <!-- <hr> Horizontal rule element -->
+<br>
 
-
+  <div style="background-color:rgb(127, 255, 127);border-radius: 2%;margin: 0.3%;">
 
 
 
@@ -321,7 +351,7 @@
           <p id="emailBody"></p>
         </div>
 
-
+</div>
 
     <div class="modal fade" id="PC1Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
