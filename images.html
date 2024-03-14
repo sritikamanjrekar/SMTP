@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Changer</title>
+<style>
+    /* Style for the image container */
+    .image-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Style for the images */
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+    <img src="image1.png" alt="Image 1" id="current-image">
+</div>
+
+<script>
+    // JavaScript for changing images
+    document.addEventListener("DOMContentLoaded", function() {
+        let currentIndex = 1; // Index of the current image
+        const totalImages = 3; // Total number of images
+        const imageElement = document.getElementById('current-image');
+
+        function changeImage() {
+            currentIndex = (currentIndex % totalImages) + 1;
+            imageElement.src = `image${currentIndex}.png`; // Update image src
+            imageElement.alt = `Image ${currentIndex}`; // Update image alt
+        }
+
+        // Change image every 3 seconds
+        setInterval(changeImage, 3000);
+    });
+</script>
+
+</body>
+</html>

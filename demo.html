@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email System</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+zgbk/5x2+6FPs9Z4JlT3oY4qF2bPFX2KsJZ5vB" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- PC-1 Email Modal -->
+  <div class="modal fade" id="PC1EmailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-1 Email</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="PC1EmailForm">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input class="form-control" id="PC1-recipient-name" type="text">
+
+                
+            </div>
+            <div class="mb-3">
+              <label for="subject-name" class="col-form-label">Subject:</label>
+              <input type="text" class="form-control" id="PC1-subject-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="PC1-message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-info" data-bs-target="#PC-1IpAddress" data-bs-toggle="modal">PC-1 Info</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" onclick="sendEmail('PC1')">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PC-1 Inbox Modal -->
+  <div class="modal fade" id="PC1InboxModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-1 Inbox</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Display email links dynamically -->
+          <ul id="PC1-emailLinks"></ul>
+
+          <!-- Display stored email content here -->
+          <div id="PC1-storedEmailContent"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PC-2 Email Modal -->
+  <div class="modal fade" id="PC2EmailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-2 Email</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="PC2EmailForm">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input class="form-control" id="PC2-recipient-name" type="text">
+            </div>
+            <div class="mb-3">
+              <label for="subject-name" class="col-form-label">Subject:</label>
+              <input type="text" class="form-control" id="PC2-subject-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="PC2-message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-info" data-bs-target="#PC-2IpAddress" data-bs-toggle="modal">PC-2 Info</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" onclick="sendEmail('PC2')">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PC-2 Inbox Modal -->
+  <div class="modal fade" id="PC2InboxModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-2 Inbox</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Display email links dynamically -->
+          <ul id="PC2-emailLinks"></ul>
+
+          <!-- Display stored email content here -->
+          <div id="PC2-storedEmailContent"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PC-3 Email Modal -->
+  <div class="modal fade" id="PC3EmailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-3 Email</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="PC3EmailForm">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input class="form-control" id="PC3-recipient-name" type="text">
+            </div>
+            <div class="mb-3">
+              <label for="subject-name" class="col-form-label">Subject:</label>
+              <input type="text" class="form-control" id="PC3-subject-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="PC3-message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-info" data-bs-target="#PC-3IpAddress" data-bs-toggle="modal">PC-3 Info</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" onclick="sendEmail('PC3')">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PC-3 Inbox Modal -->
+  <div class="modal fade" id="PC3InboxModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PC-3 Inbox</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Display email links dynamically -->
+          <ul id="PC3-emailLinks"></ul>
+
+          <!-- Display stored email content here -->
+          <div id="PC3-storedEmailContent"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Similar structure for PC-2 and PC-3 modals -->
+
+  <!-- JavaScript for storing input and displaying in the inbox -->
+  <script>
+    var emails = {
+      PC1: [
+        { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
+        { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
+        { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
+      ],
+      PC2: [
+        // PC2 emails
+        { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
+        { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
+        { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
+
+      ],
+      PC3: [
+        // PC3 emails
+        { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
+        { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
+        { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
+
+      ]
+    };
+
+    function sendEmail(pc) {
+      // Get input values
+      var recipient = document.getElementById(pc + "-recipient-name").value;
+      var subject = document.getElementById(pc + "-subject-name").value;
+      var message = document.getElementById(pc + "-message-text").value;
+
+      // Construct email content
+      var emailContent = "<strong>Recipient:</strong> " + recipient + "<br>" +
+        "<strong>Subject:</strong> " + subject + "<br>" +
+        "<strong>Message:</strong> " + message;
+
+      // Display stored email content in the corresponding inbox modal
+      //document.getElementById(pc + "-storedEmailContent").innerHTML = emailContent;
+
+      // Update the inbox modal based on recipient
+      if (recipient === "user2@email.com") {
+        // Display the content in PC-2's inbox modal
+        document.getElementById("PC2-storedEmailContent").innerHTML = emailContent;
+      }
+
+      if (recipient === "user1@email.com") {
+        // Display the content in PC-2's inbox modal
+        document.getElementById("PC1-storedEmailContent").innerHTML = emailContent;
+      }
+
+      if (recipient === "user3@email.com") {
+        // Display the content in PC-2's inbox modal
+        document.getElementById("PC3-storedEmailContent").innerHTML = emailContent;
+      }
+
+      
+    }
+
+
+    function showEmail(pc, sender, recipient, subject, body) {
+      var emailContent = "<strong>From:</strong> " + sender + "<br>" +
+        "<strong>To:</strong> " + recipient + "<br>" +
+        "<strong>Subject:</strong> " + subject + "<br>" +
+        "<strong>Message:</strong> " + body;
+
+      document.getElementById(pc + "-storedEmailContent").innerHTML = emailContent;
+    }
+
+
+    function displayEmails(pc) {
+      // Get the email list container
+      var emailList = document.getElementById(pc + "-emailLinks");
+      emailList.innerHTML = '';
+
+      // Loop through the emails for the current PC
+      emails[pc].forEach(function (email, index) {
+        // Create a list item for each email
+        var listItem = document.createElement('li');
+        // Create a link to trigger display of email content
+        var link = document.createElement('a');
+        link.href = "#";
+        link.textContent = "Email " + (index + 1);
+        // Add custom attributes to the link
+        link.setAttribute('data-sender', email.sender);
+        link.setAttribute('data-recipient', email.recipient);
+        link.setAttribute('data-subject', email.subject);
+        link.setAttribute('data-body', email.body);
+        // Add an event listener to show email details when the link is clicked
+        link.addEventListener('click', function () {
+          // Retrieve email details from custom attributes
+          var sender = link.getAttribute('data-sender');
+          var recipient = link.getAttribute('data-recipient');
+          var subject = link.getAttribute('data-subject');
+          var body = link.getAttribute('data-body');
+          // Display email content
+          showEmail(pc, sender, recipient, subject, body);
+        });
+        // Append the link to the list item
+        listItem.appendChild(link);
+        // Append the list item to the email list container
+        emailList.appendChild(listItem);
+      });
+    }
+
+
+
+    document.getElementById('PC1InboxModal').addEventListener('shown.bs.modal', function () {
+      displayEmails('PC1');
+    });
+
+    document.getElementById('PC2InboxModal').addEventListener('shown.bs.modal', function () {
+      displayEmails('PC2');
+    });
+
+    document.getElementById('PC3InboxModal').addEventListener('shown.bs.modal', function () {
+      displayEmails('PC3');
+    });
+
+    // Similar event listeners for PC2 and PC3
+  </script>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-KyY8ZoeYp6T9N1Tlaoc6yDo6u0XPeiZaiApv3DqyljKk+1fpQj14mlg7b6U5z+e+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

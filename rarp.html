@@ -1,0 +1,1688 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>RARP in AR World</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+
+  <style>
+    .connector {
+      /* Set the width of the connector element */
+      width: 18.7%;
+      /* Full width for the horizontal line */
+
+      /* Set the height of the connector line */
+      height: 4px;
+      /* Adjust the height of the connector line */
+
+      /* Set the background color of the connector line */
+      background-color: blue;
+      /* Adjust the color as needed */
+
+      /* Set the position property to absolute for precise positioning */
+      position: absolute;
+
+      /* Set the left margin to position the connector horizontally */
+      margin-left: 21.4%;
+      /* Adjust the left margin as needed */
+
+      /* Set the top position to separate it from the models */
+      top: 42.5%;
+      /* Adjust the top position as needed */
+
+      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
+      z-index: 1;
+      /* Adjust the z-index as needed */
+    }
+
+
+
+    .connector-1 {
+      /* Set the width of the connector element */
+      width: 21.1%;
+      /* Full width for the horizontal line */
+
+      /* Set the height of the connector line */
+      height: 4px;
+      /* Adjust the height of the connector line */
+
+      /* Set the background color of the connector line */
+      background-color: green;
+      /* Adjust the color as needed */
+
+      /* Set the position property to absolute for precise positioning */
+      position: absolute;
+
+      /* Set the left margin to position the connector horizontally */
+      margin-left: 52.1%;
+      /* Adjust the left margin as needed */
+
+      /* Set the top position to separate it from the models */
+      top: 43.9%;
+      /* Adjust the top position as needed */
+
+      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
+      z-index: 1;
+      /* Adjust the z-index as needed */
+    }
+
+
+    .vertical-line {
+      /* Set the height of the vertical line */
+      height: 335px;
+      /* Adjust the height as needed */
+
+
+      /* Set the left margin to position the vertical line to the left side */
+      margin-left: 48%;
+      /* Adjust the left margin as needed */
+
+      /* Set the top margin to position the vertical line up from the top */
+      margin-top: -8.9%;
+      /* Adjust the top margin as needed */
+
+      /* Set the position property to absolute for precise positioning */
+      position: absolute;
+      /* Adjust the margin as needed */
+
+      /* Change the color of the dashed border */
+      border-color: red;
+      /* Adjust the border color as needed */
+
+      /* Define the border style as dashed */
+      border-style: solid;
+
+      z-index: -1;
+
+    }
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .btn-group {
+      margin-top: 10px;
+    }
+
+    .model-viewer-container {
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .connector,
+    .connector-1,
+    .vertical-line {
+      position: absolute;
+      z-index: 1;
+    }
+
+
+
+
+
+
+
+    #modelContainer {
+      display: flex;
+      position: relative;
+      margin-top: -70%;
+      /* Adjust as needed */
+      margin-left: 28%;
+      /* Adjust as needed */
+    }
+
+    @keyframes moveRight {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(1300%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes moveRight1 {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(1300%);
+      }
+
+    }
+
+    @keyframes moveLeft {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+
+
+
+    @keyframes moveFromRight {
+      0% {
+        transform: translateX(0) translateY(0);
+      }
+
+      50% {
+        transform: translateX(710%) translateY(0%);
+      }
+
+      100% {
+        transform: translateX(710%) translateY(100%);
+      }
+    }
+
+    @keyframes moveFromRight1 {
+      0% {
+        transform: translateX(0) translateY(0);
+      }
+
+      25% {
+        transform: translateX(710%) translateY(0%);
+      }
+
+      50% {
+        transform: translateX(710%) translateY(100%);
+      }
+
+      75% {
+        transform: translateX(710%) translateY(0%);
+      }
+
+      100% {
+        transform: translateX(0%) translateY(0%);
+      }
+    }
+
+
+
+    #model1,
+    #model12 {
+      width: 5%;
+      z-index: 1;
+      margin-top: -52%;
+      margin-left: 10%;
+      display: none;
+      position: absolute;
+
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+
+    #model2,
+    #model22 {
+      display: none;
+      width: 5%;
+      z-index: 1;
+      margin-left: 46%;
+      /* 
+      animation-iteration-count: 1;
+      animation-timing-function: linear; */
+
+    }
+
+    #model3,
+    #model33 {
+      display: none;
+      width: 5%;
+      z-index: 1;
+      margin-left: 76%;
+      /* 
+      animation-iteration-count: 1;
+      animation-timing-function: linear; */
+
+    }
+
+    #model1 {
+      animation-duration: 20s;
+    }
+
+    #model12 {
+      animation-duration: 20s;
+    }
+
+    #model2 {
+      animation-duration: 20s;
+    }
+
+    #model22 {
+      animation-duration: 20s;
+    }
+
+    #model3,
+    #model33 {
+      animation-duration: 20s;
+    }
+
+    .moveRight {
+      animation-name: moveRight;
+    }
+
+    .moveRight1 {
+      animation-name: moveRight1;
+    }
+
+    .moveFromRight1 {
+      animation-name: moveFromRight1;
+    }
+
+    .moveFromRight {
+      animation-name: moveFromRight;
+    }
+
+    .moveLeft {
+      animation-name: moveLeft;
+    }
+
+    .moveUp2 {
+      animation-name: moveUp2;
+    }
+
+    .moveUp22 {
+      animation-name: moveUp22;
+    }
+
+    .moveUp3 {
+      animation-name: moveUp3;
+    }
+
+    .moveUp33 {
+      animation-name: moveUp33;
+    }
+
+    .moveLeft3 {
+      animation-name: moveLeft3;
+    }
+
+    .moveLeft33 {
+      animation-name: moveLeft33;
+    }
+
+    .moveLeft4 {
+      animation-name: moveLeft4;
+    }
+
+    .moveLeft44 {
+      animation-name: moveLeft44;
+    }
+
+    @keyframes moveLeft3 {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-1200%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes moveLeft44 {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-1200%);
+      }
+
+
+    }
+
+    @keyframes moveLeft33 {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-600%);
+      }
+
+      100% {
+        transform: translateX(-600%) translateY(100%);
+      }
+
+
+    }
+
+    @keyframes moveLeft4 {
+      0% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-600%);
+      }
+
+      50% {
+        transform: translateX(-600%) translateY(100%);
+      }
+
+      75% {
+        transform: translateX(-600%) translateY(0%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+
+
+    @keyframes moveUp2 {
+      0% {
+        transform: translateY(0);
+      }
+
+      25% {
+        transform: translateY(-100%);
+      }
+
+      50% {
+        transform: translateY(-100%) translateX(-600%);
+      }
+
+      75% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes moveUp22 {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(-100%) translateX(700%);
+      }
+    }
+
+    @keyframes moveUp3 {
+      0% {
+        transform: translateY(0);
+      }
+
+      25% {
+        transform: translateY(-100%);
+      }
+
+      50% {
+        transform: translateY(-100%) translateX(600%);
+      }
+
+      75% {
+        transform: translateY(-100%) translateX(0%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+
+    }
+
+
+    @keyframes moveUp33 {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(-100%) translateX(-600%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Inserts a line break (not visible on the page) -->
+  <!-- Start of HTML Document -->
+
+  <br> <!-- Line break element -->
+
+  <!-- Container div -->
+  <div>
+
+    <!-- Center-aligned content using the deprecated <center> tag -->
+    <center>
+
+      <!-- Heading element with text "File Transfer Protocols" -->
+      <h1>Reverse Address Resolution Protocol (RARP)</h1>
+      <!-- Heading element -->
+      <button class="btn btn-warning btn-sm" onclick="openPdfPPT()">About RARP</button>
+      &ensp;&ensp;<button class="btn btn-primary btn-sm" onclick="openPdfDocs()">How To Use RARP</button>
+
+
+
+      <br> <!-- Line break element -->
+
+    </center>
+    <!-- End of center-aligned content -->
+
+  </div>
+  <!-- End of container div -->
+
+  <hr> <!-- Horizontal rule element -->
+
+
+
+
+
+
+
+
+
+  <div class="model-viewer-container">
+
+    <!-- <model-viewer src="laptop (3).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
+      shadow-intensity="1" style="margin-left: 0%;margin-top: -73%; display: flex;">
+
+      <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-3"
+        data-position="10.066504518301514m 69.27750186888898m 718.4284188104473m"
+        data-normal="0m 0.4745439042365091m 0.8802318347753455m" data-visibility-attribute="visible"
+        data-bs-toggle="modal" data-bs-target="#PC-1IpAddress">
+        <div class="HotspotAnnotation">PC-1</div>
+      </button>
+    </model-viewer> -->
+
+    <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+      style="z-index: 2;width: 100%;">
+      <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
+        data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
+        data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
+        data-bs-toggle="modal" data-bs-target="#PC-1IpAddress">
+        <div class="HotspotAnnotation">PC-1</div>
+      </button>
+
+    </model-viewer>
+
+  </div>
+
+
+
+
+
+
+  <div class="connector-1" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+
+  <div class="model-viewer-container">
+
+
+
+    <model-viewer src="switch.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
+      shadow-intensity="1">
+      <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
+        data-position="-17.82355475016235m 6.123874902725213m -167.32013377219792m" data-normal="0m 1m 0m"
+        data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Switch">
+        <div class="HotspotAnnotation">Switch</div>
+      </button>
+
+
+    </model-viewer>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="model-viewer-container">
+
+
+
+    <!-- <model-viewer src="laptop (3).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
+      shadow-intensity="1" style="margin-top: -70%;">
+
+      <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-3"
+        data-position="10.066504518301514m 69.27750186888898m 718.4284188104473m"
+        data-normal="0m 0.4745439042365091m 0.8802318347753455m" data-visibility-attribute="visible"
+        data-bs-toggle="modal" data-bs-target="#PC-2IpAddress">
+        <div class="HotspotAnnotation">PC-2</div>
+      </button>
+    </model-viewer> -->
+
+
+    <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+      style="z-index: 2;width: 100%;">
+      <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
+        data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
+        data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
+        data-bs-toggle="modal" data-bs-target="#PC-2IpAddress">
+        <div class="HotspotAnnotation">PC-2</div>
+      </button>
+
+    </model-viewer>
+
+
+  </div>
+
+
+  <div class="connector" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+
+
+
+  <div class="vertical-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+
+  <div style="width: fit-content;margin-left: 70%;">
+    <table id="PC2Table" class="table table-hover table-striped border-success table-sm table-bordered">
+      <caption>PC-2 RARP Table</caption>
+      <thead class="table-success">
+        <tr>
+
+          <th scope="col">IP Address</th>
+          <th scope="col">Hardware Address</th>
+          <th scope="col">Interface</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+        <tr>
+          <td colspan="3"><button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal"
+              data-bs-target="#pc2CMD" onclick="getUserInputCmdPc2()">Open Command Prompt</button>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+
+  <div class="model-viewer-container">
+
+    <!-- <model-viewer src="laptop (3).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
+      shadow-intensity="1" style="margin-top: -30%;margin-left: 110%;z-index: 1;">
+
+      <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-3"
+        data-position="10.066504518301514m 69.27750186888898m 718.4284188104473m"
+        data-normal="0m 0.4745439042365091m 0.8802318347753455m" data-visibility-attribute="visible"
+        data-bs-toggle="modal" data-bs-target="#PC-3IpAddress">
+        <div class="HotspotAnnotation">PC-3</div>
+      </button>
+    </model-viewer> -->
+
+    <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+      tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+      style="z-index: 2;width: 100%;margin-left: 110%;margin-top: -20%;">
+      <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
+        data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
+        data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
+        data-bs-toggle="modal" data-bs-target="#PC-3IpAddress">
+        <div class="HotspotAnnotation">PC-3</div>
+      </button>
+
+    </model-viewer>
+  </div>
+
+
+
+
+  <div style="width: fit-content;margin-left: 5%;margin-top: -25%;">
+    <table id="PC1Table" class="table table-hover table-striped border-primary table-sm table-bordered">
+      <caption>PC-1 RARP Table</caption>
+      <thead class="table-primary">
+        <tr>
+
+          <th scope="col">IP Address</th>
+          <th scope="col">Hardware Address</th>
+          <th scope="col">Interface</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+
+        <tr>
+          <td colspan="3"><button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+              data-bs-target="#pc1Cmd" onclick="getUserInputCmdPc1()">Open Command Prompt</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <div style="width: fit-content;margin-left: 40%;margin-top: 17%;">
+    <table id="PC3Table" class="table table-hover table-striped border-danger table-sm table-bordered">
+      <caption>PC-3 RARP Table</caption>
+      <thead class="table-danger">
+        <tr>
+
+          <th scope="col">IP Address</th>
+          <th scope="col">Hardware Address</th>
+          <th scope="col">Interface</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+
+        <tr>
+          <td colspan="3"><button type="button" onclick="getUserInputCmdPc3()" class="btn btn-sm btn-outline-danger"
+              data-bs-toggle="modal" data-bs-target="#pc3Cmd">Open Command Prompt</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS Laptop PC-1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          MAC Address > 0001.613C.21A6
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="PC-2IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS Laptop PC-2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          MAC Address > 0030.A333.03CB
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="PC-3IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS Laptop PC-3</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          MAC Address > 0006.2A46.1507
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Connector" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Fast Ethernet 0/1 RS-232 Wire</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+
+          <img src="rs232.jpg" alt="RS 232">
+          <img src="pinrs232.jpg" alt="Pin number of RS-232">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Switch 2950-24</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+
+          <img src="switch295-24.PNG" alt="switch2950-24">
+          <img src="switch.jpg" alt="switch2950-24">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1"
+    style="width: 5%;z-index: 3;margin-left: 10%;">
+    <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+      data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+      data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+      data-bs-target="#Modal1">
+      <div class="HotspotAnnotation">Packet</div>
+    </button>
+  </model-viewer>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="model1-1.jpeg" alt="PDU Details" width="50%">
+          <img src="model1-2.jpeg" alt="OSI Details">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model12"
+    style="width: 5%;z-index: 3;margin-left: 10%;">
+    <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+      data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+      data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+      data-bs-target="#Modal12">
+      <div class="HotspotAnnotation">Packet</div>
+    </button>
+  </model-viewer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="model1-1.jpeg" alt="PDU Details" width="50%">
+          <img src="model1-2.jpeg" alt="OSI Details">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model2" style="margin-top: -30%;z-index: 3;">
+    <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+      data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+      data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+      data-bs-target="#Modal2">
+      <div class="HotspotAnnotation">Packet</div>
+    </button>
+  </model-viewer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="model3-1.jpeg" alt="PDU Details" width="40%">
+          <img src="model3-2.jpeg" alt="OSI Details">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Okay</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model22" style="margin-top: -20%;z-index: 3;">
+    <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+      data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+      data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+      data-bs-target="#Modal22">
+      <div class="HotspotAnnotation">Packet</div>
+    </button>
+  </model-viewer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal22" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="model3-1.jpeg" alt="PDU Details" width="40%">
+          <img src="model3-2.jpeg" alt="OSI Details">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model3" style="margin-top: -50%;z-index: 3;">
+    <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+      data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+      data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+      data-bs-target="#Modal3">
+      <div class="HotspotAnnotation">Packet</div>
+    </button>
+  </model-viewer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="model2-1.jpeg" alt="PDU Details" width="40%">
+          <img src="model2-2.jpeg" alt="OSI Details">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Okay</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model33" style="margin-top: -20%;z-index: 3;">
+    <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+      data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+      data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+      data-bs-target="#Modal33">
+      <div class="HotspotAnnotation">Packet</div>
+    </button>
+  </model-viewer>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal33" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">PDU & OSI Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="model2-1.jpeg" alt="PDU Details" width="50%">
+          <img src="model2-2.jpeg" alt="OSI Details">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Okay</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function getUserInputCmdPc3() {
+      // Check if the table has data
+      var tableRows = document.querySelectorAll("PC3Table tbody tr");
+
+      // Prompt user for input
+      var userInput = prompt("PC-3 Command Prompt\nSome RARP Commands are 'rarp -a', 'ping mach_address'\nEnter something:");
+
+
+      // Check if user clicked "OK" and entered some text
+      if (userInput == 'ping 0001.613C.21A6') {
+        // Show the models by setting display to block
+        var modelViewer = document.getElementById('model2');
+        var modelViewer12 = document.getElementById('model22');
+
+        modelViewer.style.display = 'block';
+        modelViewer12.style.display = 'block';
+
+        // Add class to start the animation for model1
+        modelViewer.classList.add('moveUp2');
+
+        // Add classes to start the animations for model12
+        modelViewer12.classList.add('moveUp22');
+
+        // Remove the classes after the animations are completed (adjust the time accordingly)
+        setTimeout(function () {
+          //modelViewer.classList.remove('moveUp2');
+          //modelViewer.style.display = 'none';
+          alert('Got IP Address of PC having MAC Address 0001.613C.21A6')
+
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC3Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.1'; // Replace with the actual IP address
+          cell2.innerHTML = '0001.613C.21A6'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+
+          modelViewer.classList.remove('moveUp2');
+          modelViewer.style.display = 'none';
+          modelViewer12.classList.remove('moveUp22');
+          modelViewer12.style.display = 'none';
+
+        }, 20000); // 20 seconds, adjust as needed
+
+        setTimeout(function () {
+          //modelViewer12.classList.remove('moveUp2');
+          //modelViewer12.style.display = 'none';
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC1Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.3'; // Replace with the actual IP address
+          cell2.innerHTML = '0006.2A46.1507'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+
+
+        }, 10000); // 20 seconds, adjust as needed
+
+
+
+
+      }
+
+
+      // Check if user clicked "OK" and entered some text
+      if (userInput == 'ping 0030.A333.03CB') {
+        // Show the models by setting display to block
+        var modelViewer = document.getElementById('model2');
+        var modelViewer12 = document.getElementById('model22');
+
+        modelViewer.style.display = 'block';
+        modelViewer12.style.display = 'block';
+
+        // Add class to start the animation for model1
+        modelViewer.classList.add('moveUp3');
+
+        // Add classes to start the animations for model12
+        modelViewer12.classList.add('moveUp33');
+
+        // Remove the classes after the animations are completed (adjust the time accordingly)
+        setTimeout(function () {
+          // modelViewer.classList.remove('moveUp3');
+          // modelViewer.style.display = 'none';
+          alert('Got IP Address of PC having MAC Address 0030.A333.03CB')
+
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC3Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.2'; // Replace with the actual IP address
+          cell2.innerHTML = '0030.A333.03CB'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+          modelViewer.classList.remove('moveUp3');
+          modelViewer.style.display = 'none';
+          modelViewer12.classList.remove('moveUp33');
+          modelViewer12.style.display = 'none';
+
+
+        }, 20000); // 20 seconds, adjust as needed
+
+        setTimeout(function () {
+          //modelViewer12.classList.remove('moveUp2');
+          //modelViewer12.style.display = 'none';
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC2Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.3'; // Replace with the actual IP address
+          cell2.innerHTML = '0006.2A46.1507'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+
+
+
+        }, 10000); // 20 seconds, adjust as needed
+
+
+
+
+      }
+
+
+
+
+
+
+
+      if (userInput == 'rarp -a') {
+
+        // Get the table element
+        var table = document.getElementById("PC3Table");
+
+        // Get the tbody and thead elements
+        var tbody = table.getElementsByTagName("tbody")[0];
+        var thead = table.getElementsByTagName("thead")[0];
+
+        // Check if there are any rows in the tbody
+        if (tbody.rows.length > 1) {
+          // Get column names from the thead section
+          var columnNames = [];
+          var headerRow = thead.rows[0];
+          for (var k = 0; k < headerRow.cells.length; k++) {
+            columnNames.push(headerRow.cells[k].innerText);
+          }
+
+          // Construct the message with column names and row data
+          var message = "RARP Table Data:\n";
+
+          // Add column names to the message
+          message += columnNames.join("\t") + "\n";
+
+          // Add row data to the message
+          for (var i = 1; i < tbody.rows.length; i++) {
+            var row = tbody.rows[i];
+            for (var j = 0; j < row.cells.length; j++) {
+              // Add data from each cell to the message
+              message += row.cells[j].innerText + "\t";
+            }
+            // Add a newline character after each row
+            message += "\n";
+          }
+
+          // Display alert with the table data
+          alert(message);
+        } else {
+          // Display alert if the table is empty
+          alert("No RARP Entries Found!");
+        }
+
+
+
+        // //Check if there are any rows with non-empty cells
+        // var hasData = Array.from(tableRows).some(row => {
+        //   var cells = row.querySelectorAll("td");
+        //   return Array.from(cells).some(cell => cell.textContent.trim() !== "");
+        // });
+
+        // if (!hasData) {
+        //   // Alert the user that there are no ARP entries
+        //   alert("No ARP Entries Found.");
+        //   return;
+        // }
+
+      }
+      else if (userInput == null || userInput == '') {
+        // Show alert if the user canceled or entered empty text
+        alert("You canceled or entered empty text.");
+      }
+    }
+
+
+    function getUserInputCmdPc2() {
+      // Check if the table has data
+      var tableRows = document.querySelectorAll("PC2Table tbody tr");
+
+      // Prompt user for input
+      var userInput = prompt("PC-2 Command Prompt\nSome RARP Commands are 'rarp -a', 'ping mac_address'\nEnter something:");
+
+
+
+      // Check if user clicked "OK" and entered some text
+      if (userInput == 'ping 0001.613C.21A6') {
+        // Show the models by setting display to block
+        var modelViewer = document.getElementById('model3');
+        var modelViewer12 = document.getElementById('model33');
+
+        modelViewer.style.display = 'block';
+        modelViewer12.style.display = 'block';
+
+        // Add class to start the animation for model1
+        modelViewer.classList.add('moveLeft3');
+
+        // Add classes to start the animations for model12
+        modelViewer12.classList.add('moveLeft33');
+
+        // Remove the classes after the animations are completed (adjust the time accordingly)
+        setTimeout(function () {
+
+          alert('Got IP Address of PC having MAC Address 0001.613C.21A6')
+
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC2Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.1'; // Replace with the actual IP address
+          cell2.innerHTML = '0001.613C.21A6'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+          modelViewer.classList.remove('moveLeft3');
+          modelViewer.style.display = 'none';
+          modelViewer12.classList.remove('moveLeft33');
+          modelViewer12.style.display = 'none';
+
+
+        }, 20000); // 20 seconds, adjust as needed
+
+        setTimeout(function () {
+
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC1Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.2'; // Replace with the actual IP address
+          cell2.innerHTML = '0030.A333.03CB'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+
+
+
+        }, 10000); // 20 seconds, adjust as needed
+
+
+      }
+
+      // Check if user clicked "OK" and entered some text
+      if (userInput == 'ping 0006.2A46.1507') {
+        // Show the models by setting display to block
+        var modelViewer = document.getElementById('model3');
+        var modelViewer12 = document.getElementById('model33');
+
+        modelViewer.style.display = 'block';
+        modelViewer12.style.display = 'block';
+
+        // Add class to start the animation for model1
+        modelViewer.classList.add('moveLeft4');
+
+        // Add classes to start the animations for model12
+        modelViewer12.classList.add('moveLeft44');
+
+        // Remove the classes after the animations are completed (adjust the time accordingly)
+        setTimeout(function () {
+
+          alert('Got IP Address of PC having MAC Address 0006.2A46.1507')
+
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC2Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.3'; // Replace with the actual IP address
+          cell2.innerHTML = '0006.2A46.1507'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+          modelViewer.classList.remove('moveLeft4');
+          modelViewer.style.display = 'none';
+          modelViewer12.classList.remove('moveLeft44');
+          modelViewer12.style.display = 'none';
+
+
+        }, 20000); // 20 seconds, adjust as needed
+
+        setTimeout(function () {
+
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC3Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.2'; // Replace with the actual IP address
+          cell2.innerHTML = '0030.A333.03CB'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+
+
+
+        }, 10000); // 20 seconds, adjust as needed
+
+
+      }
+
+
+
+
+
+
+      if (userInput == 'rarp -a') {
+
+        // Get the table element
+        var table = document.getElementById("PC2Table");
+
+        // Get the tbody and thead elements
+        var tbody = table.getElementsByTagName("tbody")[0];
+        var thead = table.getElementsByTagName("thead")[0];
+
+        // Check if there are any rows in the tbody
+        if (tbody.rows.length > 1) {
+          // Get column names from the thead section
+          var columnNames = [];
+          var headerRow = thead.rows[0];
+          for (var k = 0; k < headerRow.cells.length; k++) {
+            columnNames.push(headerRow.cells[k].innerText);
+          }
+
+          // Construct the message with column names and row data
+          var message = "RARP Table Data:\n";
+
+          // Add column names to the message
+          message += columnNames.join("\t") + "\n";
+
+          // Add row data to the message
+          for (var i = 1; i < tbody.rows.length; i++) {
+            var row = tbody.rows[i];
+            for (var j = 0; j < row.cells.length; j++) {
+              // Add data from each cell to the message
+              message += row.cells[j].innerText + "\t";
+            }
+            // Add a newline character after each row
+            message += "\n";
+          }
+
+          // Display alert with the table data
+          alert(message);
+        } else {
+          // Display alert if the table is empty
+          alert("No RARP Entries Found!");
+        }
+
+
+
+        // //Check if there are any rows with non-empty cells
+        // var hasData = Array.from(tableRows).some(row => {
+        //   var cells = row.querySelectorAll("td");
+        //   return Array.from(cells).some(cell => cell.textContent.trim() !== "");
+        // });
+
+        // if (!hasData) {
+        //   // Alert the user that there are no ARP entries
+        //   alert("No ARP Entries Found.");
+        //   return;
+        // }
+
+      }
+      else if (userInput == null || userInput == '') {
+        // Show alert if the user canceled or entered empty text
+        alert("You canceled or entered empty text.");
+      }
+
+
+    }
+
+    function getUserInputCmdPc1() {
+      // Check if the table has data
+      var tableRows = document.querySelectorAll("#PC1Table tbody tr");
+
+      console.log(tableRows.length);
+
+      // Prompt user for input
+      var userInput = prompt("PC-1 Command Prompt\nSome RARP Commands are 'rarp -a', 'ping mac_address'\nEnter something:");
+
+      // Check if user clicked "OK" and entered some text
+      if (userInput == 'ping 0030.A333.03CB') {
+        // Show the models by setting display to block
+        var modelViewer = document.getElementById('model1');
+        var modelViewer12 = document.getElementById('model12');
+
+        modelViewer.style.display = 'block';
+        modelViewer12.style.display = 'block';
+
+        // Add class to start the animation for model1
+        modelViewer.classList.add('moveRight');
+
+        // Add classes to start the animations for model12
+        modelViewer12.classList.add('moveFromRight');
+
+        // Remove the classes after the animations are completed (adjust the time accordingly)
+        setTimeout(function () {
+          // modelViewer.classList.remove('moveRight');
+          //modelViewer.style.display = 'none';
+
+
+
+          alert('Got IP Address of PC having MAC Address 0030.A333.03CB')
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC1Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.2'; // Replace with the actual IP address
+          cell2.innerHTML = '0030.A333.03CB'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+          modelViewer.classList.remove('moveRight');
+          modelViewer.style.display = 'none';
+          modelViewer12.classList.remove('moveFromRight');
+          modelViewer12.style.display = 'none';
+
+
+        }, 20000); // 20 seconds, adjust as needed
+
+        setTimeout(function () {
+          //modelViewer12.classList.remove('moveRight');
+          //modelViewer12.style.display = 'none';
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC2Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.1'; // Replace with the actual IP address
+          cell2.innerHTML = '0001.613C.21A6'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+
+
+        }, 10000); // 20 seconds, adjust as needed
+
+
+
+
+      }
+
+      // Check if user clicked "OK" and entered some text
+      if (userInput == 'ping 0006.2A46.1507') {
+        // Show the models by setting display to block
+        var modelViewer = document.getElementById('model1');
+        var modelViewer12 = document.getElementById('model12');
+
+        modelViewer.style.display = 'block';
+        modelViewer12.style.display = 'block';
+
+        // Add class to start the animation for model1
+        modelViewer.classList.add('moveRight1');
+
+        // Add classes to start the animations for model12
+        modelViewer12.classList.add('moveFromRight1');
+
+        // Remove the classes after the animations are completed (adjust the time accordingly)
+        setTimeout(function () {
+          //modelViewer.classList.remove('moveRight1');
+          //modelViewer.style.display = 'none';
+          alert('Got IP Address of PC having MAC Address 0006.2A46.1507')
+
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC1Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.3'; // Replace with the actual IP address
+          cell2.innerHTML = '0006.2A46.1507'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+
+          modelViewer.classList.remove('moveRight1');
+          modelViewer.style.display = 'none';
+          modelViewer12.classList.remove('moveFromRight1')
+          modelViewer12.style.display = 'none';
+
+        }, 20000); // 20 seconds, adjust as needed
+
+        setTimeout(function () {
+          //modelViewer12.classList.remove('moveFromRight1');
+          //modelViewer12.style.display = 'none';
+
+          // Adding a new row to the table
+          var table = document.getElementById('PC3Table').getElementsByTagName('tbody')[0];
+          var newRow = table.insertRow(table.rows.length);
+
+          // You can customize the content of the new row as needed
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          var cell3 = newRow.insertCell(2);
+
+          cell1.innerHTML = '192.168.11.1'; // Replace with the actual IP address
+          cell2.innerHTML = '0001.613C.21A6'; // Replace with the actual hardware address
+          cell3.innerHTML = 'Fast Ethernet 0/1'; // Replace with the actual interface
+
+
+
+        }, 10000); // 20 seconds, adjust as needed
+
+
+
+
+      }
+
+
+      if (userInput == 'rarp -a') {
+
+        // Get the table element
+        var table = document.getElementById("PC1Table");
+
+        // Get the tbody and thead elements
+        var tbody = table.getElementsByTagName("tbody")[0];
+        var thead = table.getElementsByTagName("thead")[0];
+
+        // Check if there are any rows in the tbody
+        if (tbody.rows.length > 1) {
+          // Get column names from the thead section
+          var columnNames = [];
+          var headerRow = thead.rows[0];
+          for (var k = 0; k < headerRow.cells.length; k++) {
+            columnNames.push(headerRow.cells[k].innerText);
+          }
+
+          // Construct the message with column names and row data
+          var message = "RARP Table Data:\n";
+
+          // Add column names to the message
+          message += columnNames.join("\t") + "\n";
+
+          // Add row data to the message
+          for (var i = 1; i < tbody.rows.length; i++) {
+            var row = tbody.rows[i];
+            for (var j = 0; j < row.cells.length; j++) {
+              // Add data from each cell to the message
+              message += row.cells[j].innerText + "\t";
+            }
+            // Add a newline character after each row
+            message += "\n";
+          }
+
+          // Display alert with the table data
+          alert(message);
+        } else {
+          // Display alert if the table is empty
+          alert("No RARP Entries Found!");
+        }
+
+
+
+        // //Check if there are any rows with non-empty cells
+        // var hasData = Array.from(tableRows).some(row => {
+        //   var cells = row.querySelectorAll("td");
+        //   return Array.from(cells).some(cell => cell.textContent.trim() !== "");
+        // });
+
+        // if (!hasData) {
+        //   // Alert the user that there are no ARP entries
+        //   alert("No ARP Entries Found.");
+        //   return;
+        // }
+
+      }
+      else if (userInput == null || userInput == '') {
+        // Show alert if the user canceled or entered empty text
+        alert("You canceled or entered empty text.");
+      }
+
+
+
+    }
+
+
+
+
+
+
+    function openPdfPPT() {
+      window.open('openPdfPPT.html', '_blank');
+    }
+
+    function openPdfDocs() {
+      window.open('openPdfDocs.html', '_blank');
+    }
+
+  </script>
+
+
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+
+  <!-- Includes a JavaScript module for 3D model viewing -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Includes the Bootstrap JavaScript library from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
