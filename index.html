@@ -213,6 +213,123 @@
     #emailDetails p span {
       color: #666;
     }
+
+
+    @keyframes moveRight {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(1000%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+
+    @keyframes moveUpRight {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+
+      20% {
+        transform: translateY(-38vh) translateX(-29vw);
+      }
+
+      40% {
+        transform: translateY(-38vh) translateX(-1vw);
+      }
+
+      60% {
+        transform: translateY(-38vh) translateX(-29vw);
+      }
+
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+
+
+
+
+    }
+
+    @keyframes moveUpRightStraight {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+
+      20% {
+        transform: translateY(-38vh) translateX(0);
+      }
+
+      40% {
+        transform: translateY(-38vh) translateX(29vw);
+      }
+
+      60% {
+        transform: translateY(-38vh) translateX(0vw);
+      }
+
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+
+    }
+
+
+    @keyframes moveRight2 {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+
+      20% {
+        transform: translateY(0)  translateX(1000%);
+      }
+
+      40% {
+        transform: translateY(0) translateX(0%);
+      }
+
+      60% {
+        transform: translateY(0)  translateX(1000%);
+      }
+
+      80% {
+        transform: translateY(0) translateX(500%);
+      }
+
+      90%{
+        transform: translateY(-38vh) translateX(500%);
+      }
+
+      100%{
+        transform: translateY(0) translateX(500%);
+      }
+
+      
+
+    }
+
+
+
+    #model3 {
+      animation: moveUpRight 20s ease-in-out 3 forwards;
+    }
+
+    #model2 {
+      animation: moveUpRightStraight 20s ease-in-out 3 forwards;
+    }
+
+
+    #model1ToPC2{
+      animation: moveRight2 20s ease-in-out 3 forwards;
+    }
+
+
+
   </style>
 
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
@@ -227,7 +344,7 @@
   <br> <!-- Line break element -->
 
   <div>
-    <a href="https://sritikamanjrekar.github.io/ARNetExperince/">
+    <a href="https://sritikamanjrekar.github.io/ARNetExperience/">
       <img src="logo.png" alt="ARNetExperince" style="width: 12%;margin-left: 2%;"></a>
     <div style="margin-left: 86%;margin-top: -3%;">
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://sritikamanjrekar.github.io/SMTP/" target="_blank"><i
@@ -237,9 +354,9 @@
           style="border-radius: 50%;margin-left: 3%;"></i></a>
       <a href="https://www.linkedin.com/shareArticle?url=https://sritikamanjrekar.github.io/SMTP/" target="_blank"><i
           class="ri-linkedin-fill btn btn-outline-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
-          <a href="whatsapp://send?text=Check%20out%20this%20awesome%20website!%20https://sritikamanjrekar.github.io/SMTP/" target="_blank">
-            <i class="ri-whatsapp-line btn btn-outline-danger"
-            style="border-radius: 50%;margin-left: 3%;"></i></a>
+      <a href="whatsapp://send?text=Check%20out%20this%20awesome%20website!%20https://sritikamanjrekar.github.io/SMTP/"
+        target="_blank">
+        <i class="ri-whatsapp-line btn btn-outline-danger" style="border-radius: 50%;margin-left: 3%;"></i></a>
 
     </div>
 
@@ -302,7 +419,7 @@
 
 
         <model-viewer src="switch.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
-          shadow-intensity="1" >
+          shadow-intensity="1">
           <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
             data-position="-17.82355475016235m 6.123874902725213m -167.32013377219792m" data-normal="0m 1m 0m"
             data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Switch">
@@ -320,7 +437,7 @@
 
       <div class="model-viewer-container">
         <model-viewer src="server_racking_system.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          poster="poster.webp" shadow-intensity="1" >
+          poster="poster.webp" shadow-intensity="1">
 
           <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-3"
             data-position="-0.2986763782425904m 1.905029363515141m 0.5064332606660245m"
@@ -374,6 +491,71 @@
         </model-viewer>
 
       </div>
+
+
+      <div class="model-viewer-container">
+
+        <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+          tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1"
+          style="width: 18%;z-index: 3;margin-left: -150%;margin-top: -135%; display: none;">
+          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+            data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+            data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+            data-bs-target="#Modal1">
+            <div class="HotspotAnnotation">Packet</div>
+          </button>
+        </model-viewer>
+
+      </div>
+
+      <div class="model-viewer-container">
+
+        <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+          tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1ToPC2"
+          style="width: 18%;z-index: 3;margin-top: -140%;margin-left: 54%; ">
+          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+            data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+            data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+            data-bs-target="#Modal1toPC2">
+            <div class="HotspotAnnotation">Packet</div>
+          </button>
+        </model-viewer>
+
+      </div>
+
+      
+
+
+      <div class="model-viewer-container">
+
+        <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+          tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model2"
+          style="width: 18%;z-index: 3;margin-left: 150%;margin-top: -78%; display: none;">
+          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+            data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+            data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+            data-bs-target="#Modal2">
+            <div class="HotspotAnnotation">Packet</div>
+          </button>
+        </model-viewer>
+
+      </div>
+
+      <div class="model-viewer-container">
+
+        <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+          tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model3"
+          style="width: 18%;z-index: 3;margin-left: 155%;margin-top: -78%;display: none; ">
+          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+            data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+            data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+            data-bs-target="#Modal3">
+            <div class="HotspotAnnotation">Packet</div>
+          </button>
+        </model-viewer>
+
+      </div>
+
 
       <!-- <div id="emailContainer1" style="margin-left: 5%; margin-top: -22%;">
         <div id="emailList1">
@@ -556,10 +738,10 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-    
+
               <img src="rs232.jpg" alt="RS 232">
               <img src="pinrs232.jpg" alt="Pin number of RS-232">
-    
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
@@ -787,13 +969,8 @@
       </div>
 
 
-      <input type="text" class="form-control" id="recipient-name">
-      <input type="text" class="form-control" id="subject-name">
-      <textarea class="form-control" id="message-text"></textarea>
-
-      <button type="button" class="btn btn-primary" onclick="sendEmail('PC1')">Send message</button>
-
-      <div id="PC3-storedEmailContent"></div>
+      
+      
 
 
       <script>
@@ -856,6 +1033,85 @@
             // Display the content in PC-2's inbox modal
             document.getElementById("PC3-storedEmailContent").innerHTML = emailContent;
           }
+
+
+          if (pc = 'PC1') {
+            if (recipient === "user2@email.com") {
+              //PC-1 to Pc2 animation
+            }
+
+            if (recipient == "user3@email.com") {
+              //Pc1 to Pc3 animation
+            }
+
+            if (recipient == "user1@email.com") {
+
+              var modelViewer = document.getElementById('model1');
+              modelViewer.style.animation = 'moveRight 20s linear 3';
+              modelViewer.style.display = 'block';
+
+              // When the animation ends, hide the model-viewer element
+              modelViewer.addEventListener('animationend', function () {
+                alert('This is how a SMTP Protocol works when you send email to user1@email.com');
+
+                modelViewer.style.display = 'none';
+              });
+
+
+
+            }
+          }
+
+
+          if (pc = 'PC2') {
+            if (recipient === "user2@email.com") {
+              var modelViewer = document.getElementById('model2');
+              modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
+              modelViewer.style.display = 'block';
+
+              // When the animation ends, hide the model-viewer element
+              modelViewer.addEventListener('animationend', function () {
+                alert('This is how a SMTP Protocol works when you send email to user2@email.com');
+
+                modelViewer.style.display = 'none';
+              });
+            }
+
+            if (recipient == "user3@email.com") {
+              //Pc1 to Pc3 animation
+            }
+
+            if (recipient == "user1@email.com") {
+              //Pc1 to Pc3 animation
+            }
+          }
+
+
+
+          if (pc = 'PC3') {
+            if (recipient === "user2@email.com") {
+              //PC-3 to Pc2 animation
+            }
+
+            if (recipient == "user1@email.com") {
+              //Pc3 to Pc1 animation
+            }
+
+            if (recipient == "user3@email.com") {
+              var modelViewer = document.getElementById('model3');
+              modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
+              modelViewer.style.display = 'block';
+
+              // When the animation ends, hide the model-viewer element
+              modelViewer.addEventListener('animationend', function () {
+                alert('This is how a SMTP Protocol works when you send email to user3@email.com');
+
+                modelViewer.style.display = 'none';
+              });
+            }
+          }
+
+
 
 
         }
