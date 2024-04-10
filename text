@@ -4,4 +4,22 @@ PC3 > 192.168.11.3
 Server > 181.168.11.4
 
 
+TODO :-
+
+✔️ add copy text
+
+✔️ change text color to black
+
+add simulation
+
+packet images
+
+add alert messages
+    -> in start when page loads
+    -> when clicked on send message button
+    -> when click on text copy button
+    -> 
+
+✔️ add drop down menu
+
 

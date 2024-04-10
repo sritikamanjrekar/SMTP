@@ -11,89 +11,66 @@
 
   <link type="text/css" href="./styles.css" rel="stylesheet" />
 
+  <link rel="stylesheet" href="icomoon.css">
+
 
   <style>
+    .connector,
+    .connector-1 {
+      position: relative;
+
+    }
+
     .connector {
-      /* Set the width of the connector element */
-      width: 18.7%;
-      /* Full width for the horizontal line */
 
-      /* Set the height of the connector line */
+      width: 28.6%;
+
       height: 4px;
-      /* Adjust the height of the connector line */
 
-      /* Set the background color of the connector line */
       background-color: blue;
-      /* Adjust the color as needed */
 
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
 
-      /* Set the left margin to position the connector horizontally */
-      margin-left: 21.4%;
-      /* Adjust the left margin as needed */
+      margin-left: 17%;
 
-      /* Set the top position to separate it from the models */
-      top: 41.7%;
-      /* Adjust the top position as needed */
+      position: relative;
 
-      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
       z-index: 1;
-      /* Adjust the z-index as needed */
+
+      margin-top: -10%;
+
     }
 
     .connector1 {
-      /* Set the width of the connector element */
-      width: 23.7%;
-      /* Full width for the horizontal line */
 
-      /* Set the height of the connector line */
+      width: 37%;
+
       height: 4px;
-      /* Adjust the height of the connector line */
 
-      /* Set the background color of the connector line */
       background-color: red;
-      /* Adjust the color as needed */
 
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
 
-      /* Set the left margin to position the connector horizontally */
-      margin-left: 52%;
-      /* Adjust the left margin as needed */
+      margin-left: 48%;
 
-      /* Set the top position to separate it from the models */
-      top: 42.7%;
-      /* Adjust the top position as needed */
+      margin-top: -7.5%;
+      position: relative;
+      z-index: 0;
 
-      /* Set the z-index to 1 for layering, ensuring it appears above other elements */
-      z-index: 1;
-      /* Adjust the z-index as needed */
     }
 
     .vertical-line {
-      /* Set the height of the vertical line */
+
       height: 315px;
-      /* Adjust the height as needed */
 
+      width: 0.1px;
 
-      /* Set the left margin to position the vertical line to the left side */
-      margin-left: 48%;
-      /* Adjust the left margin as needed */
+      margin-left: 46%;
 
-      /* Set the top margin to position the vertical line up from the top */
-      margin-top: -8.9%;
-      /* Adjust the top margin as needed */
+      margin-top: -11.5%;
 
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
-      /* Adjust the margin as needed */
+      position: relative;
 
-      /* Change the color of the dashed border */
       border-color: green;
-      /* Adjust the border color as needed */
 
-      /* Define the border style as dashed */
       border-style: solid;
 
       z-index: 0;
@@ -101,35 +78,29 @@
     }
 
     .salnted-line {
-      /* Set the height of the vertical line */
+
       height: 500px;
-      /* Adjust the height as needed */
+
+      width: 0.1px;
+
 
       transform: rotate(-60deg);
-      /* Set the left margin to position the vertical line to the left side */
-      margin-left: 65%;
-      /* Adjust the left margin as needed */
 
-      /* Set the top margin to position the vertical line up from the top */
-      margin-top: -17.3%;
-      /* Adjust the top margin as needed */
+      margin-left: 61.3%;
 
-      /* Set the position property to absolute for precise positioning */
-      position: absolute;
-      /* Adjust the margin as needed */
+      margin-top: -29%;
 
-      /* Change the color of the dashed border */
+      position: relative;
+
       border-color: purple;
-      /* Adjust the border color as needed */
 
-      /* Define the border style as dashed */
       border-style: solid;
 
       z-index: 0;
 
     }
 
-    /* Define animation */
+
     @keyframes colorChange {
       0% {
         color: #116400;
@@ -221,7 +192,7 @@
       }
 
       50% {
-        transform: translateX(1000%);
+        transform: translateX(1400%);
       }
 
       100% {
@@ -240,7 +211,7 @@
       }
 
       40% {
-        transform: translateY(-38vh) translateX(-1vw);
+        transform: translateY(-38vh) translateX(4vw);
       }
 
       60% {
@@ -266,7 +237,7 @@
       }
 
       40% {
-        transform: translateY(-38vh) translateX(29vw);
+        transform: translateY(-38vh) translateX(36vw);
       }
 
       60% {
@@ -286,7 +257,7 @@
       }
 
       20% {
-        transform: translateY(0)  translateX(1000%);
+        transform: translateY(0) translateX(1000%);
       }
 
       40% {
@@ -294,22 +265,22 @@
       }
 
       60% {
-        transform: translateY(0)  translateX(1000%);
+        transform: translateY(0) translateX(1000%);
       }
 
       80% {
         transform: translateY(0) translateX(500%);
       }
 
-      90%{
+      90% {
         transform: translateY(-38vh) translateX(500%);
       }
 
-      100%{
+      100% {
         transform: translateY(0) translateX(500%);
       }
 
-      
+
 
     }
 
@@ -324,240 +295,269 @@
     }
 
 
-    #model1ToPC2{
-      animation: moveRight2 20s ease-in-out 3 forwards;
+    #model1 {
+      animation: moveRight 20s ease-in-out 3 forwards;
     }
-
-
-
   </style>
 
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 
 <body>
 
-  <!-- Inserts a line break (not visible on the page) -->
-  <!-- Start of HTML Document -->
 
-  <br> <!-- Line break element -->
+
+  <br>
+
+
+  <nav class="fh5co-nav" role="navigation">
+    <!-- <div class="top-menu"> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center logo-wrap">
+          <div id="fh5co-logo"><a href="https://sritikamanjrekar.github.io/ARNetExperience/"><img src="logo.png"
+                alt="logo" width="20%" /><span></span></a></div>
+
+
+
+
+        </div>
+
+        <div class="col-xs-12 text-center menu-1 menu-wrap nav-links nav-btn">
+          <ul>
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/">Home</a></li>
+
+
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/#fh5co-about">About</a></li>
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/learning.html">Start Learning</a></li>
+
+            <li class="nav-link" style="--i: .85s"><a href="">Manual<i class="fas fa-caret-down"></i></a>
+
+              <div class="dropdown">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="#">Documentation</a>
+
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#">Video</a>
+
+                  </li>
+
+                </ul>
+              </div>
+
+            </li>
+
+            <li><a href="https://sritikamanjrekar.github.io/ARNetExperience/contact.html">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- </div> -->
+  </nav>
+
 
   <div>
-    <a href="https://sritikamanjrekar.github.io/ARNetExperience/">
-      <img src="logo.png" alt="ARNetExperince" style="width: 12%;margin-left: 2%;"></a>
-    <div style="margin-left: 86%;margin-top: -3%;">
+    <div style="margin-left: 86%;margin-top: -6%;">
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://sritikamanjrekar.github.io/SMTP/" target="_blank"><i
-          class="ri-facebook-fill btn btn-outline-primary" style="border-radius: 50%;"></i></a>
+          class="ri-facebook-fill btn btn-primary" style="border-radius: 50%;"></i></a>
       <a href="https://twitter.com/intent/tweet?url=https://sritikamanjrekar.github.io/SMTP/&text=Check%20out%20this%20awesome%20website!"
-        target="_blank"><i class="ri-twitter-fill  btn btn-outline-success"
+        target="_blank"><i class="ri-twitter-x-fill btn btn-success"
           style="border-radius: 50%;margin-left: 3%;"></i></a>
       <a href="https://www.linkedin.com/shareArticle?url=https://sritikamanjrekar.github.io/SMTP/" target="_blank"><i
-          class="ri-linkedin-fill btn btn-outline-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
+          class="ri-linkedin-fill btn btn-info" style="border-radius: 50%;margin-left: 3%;"></i></a>
       <a href="whatsapp://send?text=Check%20out%20this%20awesome%20website!%20https://sritikamanjrekar.github.io/SMTP/"
         target="_blank">
-        <i class="ri-whatsapp-line btn btn-outline-danger" style="border-radius: 50%;margin-left: 3%;"></i></a>
+        <i class="ri-whatsapp-line btn btn-danger" style="border-radius: 50%;margin-left: 3%;"></i></a>
+
+    </div>
+  </div>
+
+  <br>
+
+  <div style="background-color:rgb(127, 255, 127);border-radius: 2%;margin: 0.3%;z-index: -4;margin-top:
+    0%;padding-bottom: 2%;">
+
+    <h3>Simple Mail Transfer Protocol (SMTP)</h3>
+
+
+
+
+    <div class="model-viewer-container">
+
+
+
+      <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+        style="z-index: 2;margin-left: 10%;">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
+          data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
+          data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
+          data-bs-toggle="modal" data-bs-target="#PC1Email">
+          <div class="HotspotAnnotation">PC-1</div>
+        </button>
+
+      </model-viewer>
 
     </div>
 
-    <!-- Container div -->
-    <div>
 
-      <!-- Center-aligned content using the deprecated <center> tag -->
-      <center>
 
-        <!-- Heading element with text "File Transfer Protocols" -->
-        <h1 style="margin-top: -2%;"><b><span style="letter-spacing: 0.5cqmin;color: #116400;">Simple Mail Transfer
-              Protocol (SMTP)</span></b></h1>
-        <!-- Heading element -->
-        <button class="btn btn-outline-success btn-sm" onclick="openPdfPPT()">About SMTP</button>
-        &ensp;&ensp;<button class="btn btn-outline-primary btn-sm" onclick="openPdfDocs()">How To Use SMTP
-          Document</button>
-        &ensp;&ensp;<button class="btn btn-outline-danger btn-sm" onclick="openVideo()">How To Use SMTP Video</button>
+    <div class="connector" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+
+    <div class="model-viewer-container">
 
 
 
-        <br> <!-- Line break element -->
+      <model-viewer src="router 2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
+        shadow-intensity="1" style="margin-left: 120%; margin-top: -42.2%;">
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-1"
+          data-position="37.69583283935017m 4.179193256400421m -51.57656243125259m"
+          data-normal="0.006317747746330481m 0.8348694792995796m -0.5504116991829504m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2Led">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>1</b></div>
+        </button>
 
-      </center>
-      <!-- End of center-aligned content -->
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-1"
+          data-position="-0.3749784954434645m 32.58163092195337m -10.35857489224265m"
+          data-normal="0.0017078448797659893m 0.8294415367891209m -0.5585909239459302m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2IPAddress">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>2</b></div>
+        </button>
+
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-2"
+          data-position="135.16326578752825m 239.44476987204035m 104.58417854752453m"
+          data-normal="-0.3023598593036365m 0.08772456858763628m 0.9491485213326724m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2Antennae">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>3</b></div>
+        </button>
+
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-4"
+          data-position="88.68420945971755m 37.07484256823129m 90.24227904773002m"
+          data-normal="-0.006649449923m 0.035971938355325576m 0.9993306782375304m" data-visibility-attribute="visible"
+          data-bs-toggle="modal" data-bs-target="#Router2ResetPort">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>4</b></div>
+        </button>
+
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-5"
+          data-position="47.33098605286284m 21.414614725837566m 90.94919976528135m"
+          data-normal="-0.006632683433363047m 0.027969467700564785m 0.999586772815157m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2PowerConnection">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>5</b></div>
+        </button>
+
+        <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-6"
+          data-position="-0.8094441831126034m 33.45344550357601m 72.74334285260217m"
+          data-normal="-0.00698152627196316m 0.33872976862502435m 0.9408578012314887m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2InternetPort">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>6</b></div>
+        </button>
+
+
+        <button class="Hotspot transparent-button" style="border-radius: 100%; ;" slot="hotspot-7"
+          data-position="-57.48814300733627m 30.28332503405524m 73.46407912897116m"
+          data-normal="-0.006981526271955822m 0.33872976862497106m 0.940857801231508m"
+          data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Router2LANPort">
+          <div class="HotspotAnnotation" style="font-size:6px;"><b>7</b></div>
+        </button>
+
+      </model-viewer>
+
+
+      </model-viewer>
 
     </div>
-    <!-- End of container div -->
-
-    <!-- <hr> Horizontal rule element -->
-    <br>
-
-    <div style="background-color:rgb(127, 255, 127);border-radius: 2%;margin: 0.3%;">
 
 
-
-      <div class="model-viewer-container">
-
+    <div class="connector1" data-bs-toggle="modal" data-bs-target="#Connector"></div>
 
 
-        <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
-          style="z-index: 2;">
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-            data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
-            data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-            data-bs-toggle="modal" data-bs-target="#PC1Email">
-            <div class="HotspotAnnotation">PC-1</div>
-          </button>
+    <div class="model-viewer-container">
+      <model-viewer src="server_racking_system.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        poster="poster.webp" shadow-intensity="1" style="margin-top: -30%;margin-left: 230%;">
 
-        </model-viewer>
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-3"
+          data-position="-0.2986763782425904m 1.905029363515141m 0.5064332606660245m"
+          data-normal="0m 0.4745439042365091m 0.8802318347753455m" data-visibility-attribute="visible"
+          data-bs-toggle="modal" data-bs-target="#SMTPServerIpAddress">
+          <div class="HotspotAnnotation">SMTP Server</div>
+        </button>
 
-      </div>
+      </model-viewer>
+
+
+    </div>
+
+    <div class="vertical-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+    <div class="salnted-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
 
 
 
-      <div class="connector" data-bs-toggle="modal" data-bs-target="#Connector"></div>
-
-      <div class="model-viewer-container">
+    <div class="model-viewer-container">
 
 
 
-        <model-viewer src="switch.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp"
-          shadow-intensity="1">
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-            data-position="-17.82355475016235m 6.123874902725213m -167.32013377219792m" data-normal="0m 1m 0m"
-            data-visibility-attribute="visible" data-bs-toggle="modal" data-bs-target="#Switch">
-            <div class="HotspotAnnotation">Switch</div>
-          </button>
+      <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+        style="margin-left: 110%;margin-top: -40%">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
+          data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
+          data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
+          data-bs-toggle="modal" data-bs-target="#PC2Email">
+          <div class="HotspotAnnotation">PC-2</div>
+        </button>
+
+      </model-viewer>
+
+    </div>
 
 
-        </model-viewer>
-
-      </div>
+    <div class="model-viewer-container">
 
 
-      <div class="connector1" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+      <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
+        style="margin-left: 200%;margin-top: -72%">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
+          data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
+          data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
+          data-bs-toggle="modal" data-bs-target="#PC3Email">
+          <div class="HotspotAnnotation">PC-3</div>
+        </button>
+
+      </model-viewer>
+
+    </div>
 
 
-      <div class="model-viewer-container">
-        <model-viewer src="server_racking_system.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          poster="poster.webp" shadow-intensity="1">
+    <div class="model-viewer-container">
 
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-3"
-            data-position="-0.2986763782425904m 1.905029363515141m 0.5064332606660245m"
-            data-normal="0m 0.4745439042365091m 0.8802318347753455m" data-visibility-attribute="visible"
-            data-bs-toggle="modal" data-bs-target="#SMTPServerIpAddress">
-            <div class="HotspotAnnotation">SMTP Server</div>
-          </button>
+      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1"
+        style="width: 5%;z-index: 3;margin-top: -40%;margin-left: 12%;display: none;position: absolute; ">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+          data-bs-target="#Modal1toPC2">
+          <div class="HotspotAnnotation">Packet</div>
+        </button>
+      </model-viewer>
 
-        </model-viewer>
-
-
-      </div>
-
-      <div class="vertical-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
-      <div class="salnted-line" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+    </div>
 
 
 
-      <div class="model-viewer-container">
 
-
-
-        <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
-          style="margin-left: 100%;">
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-            data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
-            data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-            data-bs-toggle="modal" data-bs-target="#PC2Email">
-            <div class="HotspotAnnotation">PC-2</div>
-          </button>
-
-        </model-viewer>
-
-      </div>
-
-
-      <div class="model-viewer-container">
-
-
-        <model-viewer src="personal_computer (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          tone-mapping="commerce" poster="poster.webp" shadow-intensity="2" exposure="1.5" shadow-softness="1"
-          style="margin-left: 100%;">
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
-            data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
-            data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-            data-bs-toggle="modal" data-bs-target="#PC3Email">
-            <div class="HotspotAnnotation">PC-3</div>
-          </button>
-
-        </model-viewer>
-
-      </div>
-
-
-      <div class="model-viewer-container">
-
-        <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1"
-          style="width: 18%;z-index: 3;margin-left: -150%;margin-top: -135%; display: none;">
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
-            data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
-            data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
-            data-bs-target="#Modal1">
-            <div class="HotspotAnnotation">Packet</div>
-          </button>
-        </model-viewer>
-
-      </div>
-
-      <div class="model-viewer-container">
-
-        <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1ToPC2"
-          style="width: 18%;z-index: 3;margin-top: -140%;margin-left: 54%; ">
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
-            data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
-            data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
-            data-bs-target="#Modal1toPC2">
-            <div class="HotspotAnnotation">Packet</div>
-          </button>
-        </model-viewer>
-
-      </div>
-
-      
-
-
-      <div class="model-viewer-container">
-
-        <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model2"
-          style="width: 18%;z-index: 3;margin-left: 150%;margin-top: -78%; display: none;">
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
-            data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
-            data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
-            data-bs-target="#Modal2">
-            <div class="HotspotAnnotation">Packet</div>
-          </button>
-        </model-viewer>
-
-      </div>
-
-      <div class="model-viewer-container">
-
-        <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model3"
-          style="width: 18%;z-index: 3;margin-left: 155%;margin-top: -78%;display: none; ">
-          <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
-            data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
-            data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
-            data-bs-target="#Modal3">
-            <div class="HotspotAnnotation">Packet</div>
-          </button>
-        </model-viewer>
-
-      </div>
-
-
-      <!-- <div id="emailContainer1" style="margin-left: 5%; margin-top: -22%;">
+    <!-- <div id="emailContainer1" style="margin-left: 5%; margin-top: -22%;">
         <div id="emailList1">
           <h6>Inbox of PC-1</h6>
           <ul>
@@ -613,176 +613,213 @@
       </div> -->
 
 
-      <!-- compose message send message here for PC's -->
+    <!-- compose message send message here for PC's -->
 
-      <div class="modal fade" id="PC1Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">PC-1 Email</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+    <div class="modal fade" id="PC1Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PC-1 Email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
 
-              <form>
-                <div class="mb-3">
-                  <label for="PC1-recipient-name" class="col-form-label">Recipient:</label>
-                  <input type="text" class="form-control" id="PC1-recipient-name">
-                </div>
-                <div class="mb-3">
-                  <label for="PC1-subject-name" class="col-form-label">Subject:</label>
-                  <input type="text" class="form-control" id="PC1-subject-name">
-                </div>
-                <div class="mb-3">
-                  <label for="PC1-message-text" class="col-form-label">Message:</label>
-                  <textarea class="form-control" id="PC1-message-text"></textarea>
-                </div>
-              </form>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="PC1-sender" hidden value="user1@email.com">
+     
+                <label for="PC1-recipient-name" class="col-form-label" style="color: #000000;">Recipient:</label>
+                <input type="text" class="form-control" id="PC1-recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="PC1-subject-name" class="col-form-label" style="color: #000000;">Subject:</label>
+                <input type="text" class="form-control" id="PC1-subject-name">
+              </div>
+              <div class="mb-3">
+                <label for="PC1-message-text" class="col-form-label" style="color: #000000;">Message:</label>
+                <textarea class="form-control" id="PC1-message-text"></textarea>
+              </div>
+            </form>
 
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-outline-info" data-bs-target="#PC-1IpAddress" data-bs-toggle="modal">More Info
-              </button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" data-bs-target="#PC-1InboxModal"
-                data-bs-toggle="modal">Inbox</button>
-              <button type="button" class="btn btn-primary" onclick="sendEmail('PC1')">Send message</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-info" data-bs-target="#PC-1IpAddress" data-bs-toggle="modal">More Info
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-target="#PC-1InboxModal"
+              data-bs-toggle="modal">Inbox</button>
+            <button type="button" class="btn btn-primary" onclick="sendEmail('PC1')">Send message</button>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="modal fade" id="PC2Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">PC-2 Email</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+    <div class="modal fade" id="PC2Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PC-2 Email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
 
-              <form>
-                <div class="mb-3">
-                  <label for="PC2-recipient-name" class="col-form-label">Recipient:</label>
-                  <input type="text" class="form-control" id="PC2-recipient-name">
-                </div>
-                <div class="mb-3">
-                  <label for="PC2-subject-name" class="col-form-label">Subject:</label>
-                  <input type="text" class="form-control" id="PC2-subject-name">
-                </div>
-                <div class="mb-3">
-                  <label for="PC2-message-text" class="col-form-label">Message:</label>
-                  <textarea class="form-control" id="PC2-message-text"></textarea>
-                </div>
-              </form>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="PC2-sender" hidden value="user2@email.com">
+     
+                <label for="PC2-recipient-name" class="col-form-label" style="color: #000000;">Recipient:</label>
+                <input type="text" class="form-control" id="PC2-recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="PC2-subject-name" class="col-form-label" style="color: #000000;">Subject:</label>
+                <input type="text" class="form-control" id="PC2-subject-name">
+              </div>
+              <div class="mb-3">
+                <label for="PC2-message-text" class="col-form-label" style="color: #000000;">Message:</label>
+                <textarea class="form-control" id="PC2-message-text"></textarea>
+              </div>
+            </form>
 
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-outline-info" data-bs-target="#PC-2IpAddress" data-bs-toggle="modal">More
-                Info</button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" data-bs-target="#PC-2InboxModal"
-                data-bs-toggle="modal">Inbox</button>
-              <button type="button" class="btn btn-primary" onclick="sendEmail('PC2')">Send message</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-info" data-bs-target="#PC-2IpAddress" data-bs-toggle="modal">More
+              Info</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-target="#PC-2InboxModal"
+              data-bs-toggle="modal">Inbox</button>
+            <button type="button" class="btn btn-primary" onclick="sendEmail('PC2')">Send message</button>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="modal fade" id="PC3Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">PC-3 Email</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+    <div class="modal fade" id="PC3Email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PC-3 Email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
 
-              <form>
-                <div class="mb-3">
-                  <label for="PC3-recipient-name" class="col-form-label">Recipient:</label>
-                  <input type="text" class="form-control" id="PC3-recipient-name">
-                </div>
-                <div class="mb-3">
-                  <label for="PC3-subject-name" class="col-form-label">Subject:</label>
-                  <input type="text" class="form-control" id="PC3-subject-name">
-                </div>
-                <div class="mb-3">
-                  <label for="PC3-message-text" class="col-form-label">Message:</label>
-                  <textarea class="form-control" id="PC3-message-text"></textarea>
-                </div>
-              </form>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="PC3-sender" hidden value="user3@email.com">
+     
+                <label for="PC3-recipient-name" class="col-form-label" style="color: #000000;">Recipient:</label>
+                <input type="text" class="form-control" id="PC3-recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="PC3-subject-name" class="col-form-label" style="color: #000000;">Subject:</label>
+                <input type="text" class="form-control" id="PC3-subject-name">
+              </div>
+              <div class="mb-3">
+                <label for="PC3-message-text" class="col-form-label" style="color: #000000;">Message:</label>
+                <textarea class="form-control" id="PC3-message-text"></textarea>
+              </div>
+            </form>
 
 
 
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-outline-info" data-bs-target="#PC-3IpAddress" data-bs-toggle="modal">More
-                Info</button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" data-bs-target="#PC-3InboxModal"
-                data-bs-toggle="modal">Inbox</button>
-              <button type="button" class="btn btn-primary" onclick="sendEmail('PC3')">Send message</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-info" data-bs-target="#PC-3IpAddress" data-bs-toggle="modal">More
+              Info</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-target="#PC-3InboxModal"
+              data-bs-toggle="modal">Inbox</button>
+            <button type="button" class="btn btn-primary" onclick="sendEmail('PC3')">Send message</button>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- ends here -->
+    <!-- ends here -->
 
-      <div class="modal fade" id="Connector" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Fast Ethernet 0/1 RS-232 Wire</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
+    <div class="modal fade" id="Connector" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Fast Ethernet 0/1 RS-232 Wire
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
 
-              <img src="rs232.jpg" alt="RS 232">
-              <img src="pinrs232.jpg" alt="Pin number of RS-232">
+            <img src="rs232.jpg" alt="RS 232">
+            <img src="pinrs232.jpg" alt="Pin number of RS-232">
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="modal fade" id="Switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Switch 2950-24</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
+    <!-- <div class="model-viewer-container">
 
-              <img src="switch295-24.PNG" alt="switch2950-24">
-              <img src="switch.jpg" alt="switch2950-24">
+      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model1ToPC2"
+        style="width: 5%;z-index: 3;margin-top: 0%;margin-left: 0%;display: block;position: absolute; ">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+          data-bs-target="#Modal1toPC2">
+          <div class="HotspotAnnotation">Packet</div>
+        </button>
+      </model-viewer>
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-            </div>
-          </div>
-        </div>
-      </div>
+    </div> -->
+
+
+
+
+    <div class="model-viewer-container">
+
+      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model2"
+        style="width: 5%;z-index: 3;margin-left: 43%;margin-top: -20%; display: none;position: absolute;">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+          data-bs-target="#Modal2">
+          <div class="HotspotAnnotation">Packet</div>
+        </button>
+      </model-viewer>
+
+    </div>
+
+    <div class="model-viewer-container">
+
+      <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="model3"
+        style="width: 5%;z-index: 3;margin-left: 75%;margin-top: -22%;display: none;position: absolute; ">
+        <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-2"
+          data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+          data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible" data-bs-toggle="modal"
+          data-bs-target="#Modal3">
+          <div class="HotspotAnnotation">Packet</div>
+        </button>
+      </model-viewer>
 
 
       <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-1</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS PC-1</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="color: #000000;">
+
               IP Address > 192.168.11.1<br>
               Email Address > user1@email.com
+              &ensp;
+              <i class="ri-file-copy-line btn btn-outline-primary btn-sm" onclick="copyText1()"></i>
+
+              <input type="text" id="textToCopy1" value="user1@email.com" hidden>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
@@ -800,22 +837,22 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">PC-1 Inbox</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PC-1 Inbox</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="color: #000000;">
 
               <!-- <div class="col-8"> -->
               <div>
 
-                <ul id="PC1-emailLinks"></ul>
+                <ul id="PC1-emailLinks" style="color: #000000;"></ul>
 
               </div>
 
               <!-- <div class="collapse">
                   <div class="card card-body" style="width: 450px;"> -->
               <!-- Display stored email content here -->
-              <div id="PC1-storedEmailContent" class="card card-body" style="width: 450px;"></div>
+              <div id="PC1-storedEmailContent" class="card card-body" style="width: 450px;color: #000000;"></div>
               <!-- </div>
                 </div> -->
               <!-- </div> -->
@@ -835,7 +872,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">PC-2 Inbox</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PC-2 Inbox</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
@@ -844,13 +881,13 @@
               <div>
 
                 <!-- Display email links dynamically -->
-                <ul id="PC2-emailLinks"></ul>
+                <ul id="PC2-emailLinks" style="color: #000000;"></ul>
               </div>
 
               <!-- <div  class="collapse">
                   <div class="card card-body" style="width: 450px;"> -->
               <!-- Display stored email content here -->
-              <div id="PC2-storedEmailContent" class="card card-body" style="width: 450px;"></div>
+              <div id="PC2-storedEmailContent" class="card card-body" style="width: 450px;color: #000000;"></div>
               <!-- </div>
                 </div> -->
               <!-- </div> -->
@@ -870,22 +907,22 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">PC-3 Inbox</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PC-3 Inbox</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="color: #000000;">
 
               <!-- <div class="col-8"> -->
               <div>
 
                 <!-- Display email links dynamically -->
-                <ul id="PC3-emailLinks"></ul>
+                <ul id="PC3-emailLinks" style="color: #000000;"></ul>
               </div>
 
               <!-- <div class="collapse">
                 <div class="card card-body" style="width: 450px;"> -->
               <!-- Display stored email content here -->
-              <div id="PC3-storedEmailContent" class="card card-body" style="width: 450px;"></div>
+              <div id="PC3-storedEmailContent" class="card card-body" style="width: 450px;color: #000000;"></div>
               <!-- </div>
               </div> -->
               <!-- </div> -->
@@ -909,12 +946,16 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-2</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS PC-2</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="color: #000000;">
               IP Address > 192.168.11.2<br>
               Email Address > user2@email.com
+              &ensp;
+              <i class="ri-file-copy-line btn btn-outline-primary btn-sm" onclick="copyText2()"></i>
+
+              <input type="text" id="textToCopy2" value="user2@email.com" hidden>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
@@ -930,12 +971,16 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Windows OS PC-3</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS PC-3</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="color: #000000;">
               IP Address > 192.168.11.3<br>
               Email Address > user3@email.com
+              &ensp;
+              <i class="ri-file-copy-line btn btn-outline-primary btn-sm" onclick="copyText3()"></i>
+
+              <input type="text" id="textToCopy3" value="user3@email.com" hidden>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
@@ -952,10 +997,10 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">SMTP Server</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">SMTP Server</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="color: #000000;">
               IP Address > 192.168.11.4<br>
               Domain Name > email.com
             </div>
@@ -969,235 +1014,497 @@
       </div>
 
 
-      
-      
 
 
-      <script>
-        function openPdfPPT() {
-          window.open('openPdfPPT.html', '_blank');
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+  <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
+    <div class="container">
+      <div class="row row-pb-md">
+        <div class="col-md-4 fh5co-widget">
+          <!-- <h4 style="color: #ffffff;">ARNetExperience</h4> -->
+          <a href="https://sritikamanjrekar.github.io/ARNetExperience/"><img src="logo.png" alt="" width="60%"></a>
+          <br><br>
+          <p style="color: #000000;">Step into the Future of Learning with ARNetExperience | Explore
+            Computer
+            Networks like Never
+            Before!</p>
+        </div>
+        <div class="col-md-2 col-md-push-1 fh5co-widget">
+          <h4>Links</h4>
+          <ul class="fh5co-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#fh5co-about">About</a></li>
+            <li><a href="learning.html">Start Learning</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+
+          </ul>
+        </div>
+
+
+
+        <div class="col-md-4 col-md-push-1 fh5co-widget">
+          <h4>Contact Information</h4>
+          <ul class="fh5co-footer-links">
+            <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+            <!-- <li><a href="tel://1234567920">+ 1235 2355 98</a></li> -->
+            <li><a href="mailto:arnetexperience20@gmail.com
+                              ">arnetexperience20@gmail.com
+              </a></li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row copyright">
+        <div class="col-md-12 text-center">
+          <p>
+            <small class="block" style="color: #000000;">© 2024 ARNetExperience. All rights
+              reserved.
+              Built with passion and innovation.</small>
+
+          </p>
+          <p>
+          <ul class="fh5co-social-icons">
+            <li><a href="https://twitter.com/arnetexperience"><i class="ri-twitter-x-fill"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/@ARNetExperience-no6jb"><i class="ri-youtube-fill"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/arnetexperience/"><i class="ri-linkedin-box-fill"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/arnetexperience/"><i class="ri-instagram-fill"></i></a>
+            </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="Router2IPAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Router</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          <input type="text" id="textToCopy3" value="10.10.10.1" hidden>
+          IP Adress > 10.10.10.1
+
+          <img src="2.png" width="100%" height="100%">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Router2Antennae" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Antennae</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          Antennae broadcast wireless signals in your home network.
+          <img src="3.png" width="100%" height="100%">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Router2ResetPort" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Reset Port</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          Port for resetting router to factory defaults.
+          <img src="4.png" width="100%" height="100%">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Router2PowerConnection" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Power Connection
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          Power adapter port for router connection.
+          <img src="5.png" width="100%" height="100%">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Router2InternetPort" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">WAN/Internet
+            Port</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          Connect modem or transceiver to link home network to internet.
+          <img src="6.png" width="100%" height="100%">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Router2LANPort" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">LAN Ports</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          Ports for wired devices on home network without wireless capability.
+          <img src="7.png" width="100%" height="100%">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Router2Led" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">LED Lights</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          Lights indicate signal power, internet, and port status to keep users informed.
+          <img src="1.png" width="100%" height="100%">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Okay</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function copyText1() {
+
+      var inputElement = document.getElementById('textToCopy1');
+
+      inputElement.removeAttribute("hidden"); // Temporarily show the input to allow selection
+      inputElement.select();
+      document.execCommand("copy");
+      inputElement.setAttribute("hidden", true); // Hide the input again
+    }
+
+    function copyText2() {
+
+      var inputElement = document.getElementById('textToCopy2');
+
+      inputElement.removeAttribute("hidden"); // Temporarily show the input to allow selection
+      inputElement.select();
+      document.execCommand("copy");
+      inputElement.setAttribute("hidden", true); // Hide the input again
+    }
+
+    function copyText3() {
+
+      var inputElement = document.getElementById('textToCopy3');
+
+      inputElement.removeAttribute("hidden"); // Temporarily show the input to allow selection
+      inputElement.select();
+      document.execCommand("copy");
+      inputElement.setAttribute("hidden", true); // Hide the input again
+    }
+
+
+
+    function openPdfPPT() {
+      window.open('openPdfPPT.html', '_blank');
+    }
+
+    function openPdfDocs() {
+      window.open('openPdfDocs.html', '_blank');
+    }
+
+    var emails = {
+      PC1: [
+        { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
+        { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
+        { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
+      ],
+      PC2: [
+        // PC2 emails
+        { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
+        { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
+        { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
+
+      ],
+      PC3: [
+        // PC3 emails
+        { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
+        { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
+        { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
+
+      ]
+    };
+
+    function sendEmail(pc) {
+      // Get input values
+      var sender = document.getElementById(pc + "-sender").value;
+      var recipient = document.getElementById(pc + "-recipient-name").value;
+      var subject = document.getElementById(pc + "-subject-name").value;
+      var message = document.getElementById(pc + "-message-text").value;
+
+      // Construct email content
+      var emailContent = "<strong>Sender:</strong> " + sender + "<br>" +
+      "<strong>Recipient:</strong> " + recipient + "<br>" +
+        "<strong>Subject:</strong> " + subject + "<br>" +
+        "<strong>Message:</strong> " + message;
+
+      // Display stored email content in the corresponding inbox modal
+      //document.getElementById(pc + "-storedEmailContent").innerHTML = emailContent;
+
+      // Update the inbox modal based on recipient
+      if (recipient === "user2@email.com") {
+        // Display the content in PC-2's inbox modal
+        document.getElementById("PC2-storedEmailContent").innerHTML = emailContent;
+      }
+
+      if (recipient === "user1@email.com") {
+        // Display the content in PC-2's inbox modal
+        document.getElementById("PC1-storedEmailContent").innerHTML = emailContent;
+      }
+
+      if (recipient === "user3@email.com") {
+        // Display the content in PC-2's inbox modal
+        document.getElementById("PC3-storedEmailContent").innerHTML = emailContent;
+      }
+
+
+      if (pc = 'PC1') {
+        if (recipient === "user2@email.com") {
+          //PC-1 to Pc2 animation
         }
 
-        function openPdfDocs() {
-          window.open('openPdfDocs.html', '_blank');
+        if (recipient == "user3@email.com") {
+          //Pc1 to Pc3 animation
         }
 
-        var emails = {
-          PC1: [
-            { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
-            { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
-            { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
-          ],
-          PC2: [
-            // PC2 emails
-            { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
-            { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
-            { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
+        if (recipient == "user1@email.com") {
 
-          ],
-          PC3: [
-            // PC3 emails
-            { sender: 'sender1', recipient: 'user1@email.com', subject: 'Subject 1', body: 'This is the message of email 1.' },
-            { sender: 'sender2', recipient: 'user1@email.com', subject: 'Subject 2', body: 'This is the message of email 2.' },
-            { sender: 'sender3', recipient: 'user1@email.com', subject: 'Subject 3', body: 'This is the message of email 3.' }
+          var modelViewer = document.getElementById('model1');
+          modelViewer.style.animation = 'moveRight 20s linear 3';
+          modelViewer.style.display = 'block';
 
-          ]
-        };
+          // When the animation ends, hide the model-viewer element
+          modelViewer.addEventListener('animationend', function () {
+            alert('This is how a SMTP Protocol works when you send email to user1@email.com');
 
-        function sendEmail(pc) {
-          // Get input values
-          var recipient = document.getElementById(pc + "-recipient-name").value;
-          var subject = document.getElementById(pc + "-subject-name").value;
-          var message = document.getElementById(pc + "-message-text").value;
-
-          // Construct email content
-          var emailContent = "<strong>Recipient:</strong> " + recipient + "<br>" +
-            "<strong>Subject:</strong> " + subject + "<br>" +
-            "<strong>Message:</strong> " + message;
-
-          // Display stored email content in the corresponding inbox modal
-          //document.getElementById(pc + "-storedEmailContent").innerHTML = emailContent;
-
-          // Update the inbox modal based on recipient
-          if (recipient === "user2@email.com") {
-            // Display the content in PC-2's inbox modal
-            document.getElementById("PC2-storedEmailContent").innerHTML = emailContent;
-          }
-
-          if (recipient === "user1@email.com") {
-            // Display the content in PC-2's inbox modal
-            document.getElementById("PC1-storedEmailContent").innerHTML = emailContent;
-          }
-
-          if (recipient === "user3@email.com") {
-            // Display the content in PC-2's inbox modal
-            document.getElementById("PC3-storedEmailContent").innerHTML = emailContent;
-          }
-
-
-          if (pc = 'PC1') {
-            if (recipient === "user2@email.com") {
-              //PC-1 to Pc2 animation
-            }
-
-            if (recipient == "user3@email.com") {
-              //Pc1 to Pc3 animation
-            }
-
-            if (recipient == "user1@email.com") {
-
-              var modelViewer = document.getElementById('model1');
-              modelViewer.style.animation = 'moveRight 20s linear 3';
-              modelViewer.style.display = 'block';
-
-              // When the animation ends, hide the model-viewer element
-              modelViewer.addEventListener('animationend', function () {
-                alert('This is how a SMTP Protocol works when you send email to user1@email.com');
-
-                modelViewer.style.display = 'none';
-              });
-
-
-
-            }
-          }
-
-
-          if (pc = 'PC2') {
-            if (recipient === "user2@email.com") {
-              var modelViewer = document.getElementById('model2');
-              modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
-              modelViewer.style.display = 'block';
-
-              // When the animation ends, hide the model-viewer element
-              modelViewer.addEventListener('animationend', function () {
-                alert('This is how a SMTP Protocol works when you send email to user2@email.com');
-
-                modelViewer.style.display = 'none';
-              });
-            }
-
-            if (recipient == "user3@email.com") {
-              //Pc1 to Pc3 animation
-            }
-
-            if (recipient == "user1@email.com") {
-              //Pc1 to Pc3 animation
-            }
-          }
-
-
-
-          if (pc = 'PC3') {
-            if (recipient === "user2@email.com") {
-              //PC-3 to Pc2 animation
-            }
-
-            if (recipient == "user1@email.com") {
-              //Pc3 to Pc1 animation
-            }
-
-            if (recipient == "user3@email.com") {
-              var modelViewer = document.getElementById('model3');
-              modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
-              modelViewer.style.display = 'block';
-
-              // When the animation ends, hide the model-viewer element
-              modelViewer.addEventListener('animationend', function () {
-                alert('This is how a SMTP Protocol works when you send email to user3@email.com');
-
-                modelViewer.style.display = 'none';
-              });
-            }
-          }
-
+            modelViewer.style.display = 'none';
+          });
 
 
 
         }
+      }
 
 
-        function showEmail(pc, sender, recipient, subject, body) {
-          var emailContent = "<strong>From:</strong> " + sender + "<br>" +
-            "<strong>To:</strong> " + recipient + "<br>" +
-            "<strong>Subject:</strong> " + subject + "<br>" +
-            "<strong>Message:</strong> " + body;
+      if (pc = 'PC2') {
+        if (recipient === "user2@email.com") {
+          var modelViewer = document.getElementById('model2');
+          modelViewer.style.animation = 'moveUpRightStraight 20s ease-in-out 3 forwards;';
+          modelViewer.style.display = 'block';
 
-          document.getElementById(pc + "-storedEmailContent").innerHTML = emailContent;
+          // When the animation ends, hide the model-viewer element
+          modelViewer.addEventListener('animationend', function () {
+            alert('This is how a SMTP Protocol works when you send email to user2@email.com');
+
+            modelViewer.style.display = 'none';
+          });
         }
 
+        if (recipient == "user3@email.com") {
+          //Pc1 to Pc3 animation
+        }
 
-        // function displayEmails(pc) {
-        //   // Get the email list container
-        //   var emailList = document.getElementById(pc + "-emailLinks");
-        //   emailList.innerHTML = '';
-
-        //   // Loop through the emails for the current PC
-        //   emails[pc].forEach(function (email, index) {
-        //     // Create a list item for each email
-        //     var listItem = document.createElement('li');
-        //     // Create a link to trigger display of email content
-        //     var link = document.createElement('a');
-        //     link.href = "#";
-        //     link.textContent = "Email " + (index + 1);
-        //     // Add custom attributes to the link
-        //     link.setAttribute('data-sender', email.sender);
-        //     link.setAttribute('data-recipient', email.recipient);
-        //     link.setAttribute('data-subject', email.subject);
-        //     link.setAttribute('data-body', email.body);
-        //     // Add an event listener to show email details when the link is clicked
-        //     link.addEventListener('click', function () {
-        //       // Retrieve email details from custom attributes
-        //       var sender = link.getAttribute('data-sender');
-        //       var recipient = link.getAttribute('data-recipient');
-        //       var subject = link.getAttribute('data-subject');
-        //       var body = link.getAttribute('data-body');
-        //       // Display email content
-        //       showEmail(pc, sender, recipient, subject, body);
-        //     });
-        //     // Append the link to the list item
-        //     listItem.appendChild(link);
-        //     // Append the list item to the email list container
-        //     emailList.appendChild(listItem);
-        //   });
-        // }
+        if (recipient == "user1@email.com") {
+          //Pc1 to Pc3 animation
+        }
+      }
 
 
 
-        // document.getElementById('PC1InboxModal').addEventListener('shown.bs.modal', function () {
-        //   displayEmails('PC1');
-        // });
+      if (pc = 'PC3') {
+        if (recipient === "user2@email.com") {
+          //PC-3 to Pc2 animation
+        }
 
-        // document.getElementById('PC2InboxModal').addEventListener('shown.bs.modal', function () {
-        //   displayEmails('PC2');
-        // });
+        if (recipient == "user1@email.com") {
+          //Pc3 to Pc1 animation
+        }
 
-        // document.getElementById('PC3InboxModal').addEventListener('shown.bs.modal', function () {
-        //   displayEmails('PC3');
-        // });
+        if (recipient == "user3@email.com") {
+          var modelViewer = document.getElementById('model3');
+          modelViewer.style.animation = 'moveUpRight 20s ease-in-out 3 forwards;';
+          modelViewer.style.display = 'block';
+
+          // When the animation ends, hide the model-viewer element
+          modelViewer.addEventListener('animationend', function () {
+            alert('This is how a SMTP Protocol works when you send email to user3@email.com');
+
+            modelViewer.style.display = 'none';
+          });
+        }
+      }
 
 
 
 
-      </script>
+    }
+
+
+    function showEmail(pc, sender, recipient, subject, body) {
+      var emailContent = "<strong>From:</strong> " + sender + "<br>" +
+        "<strong>To:</strong> " + recipient + "<br>" +
+        "<strong>Subject:</strong> " + subject + "<br>" +
+        "<strong>Message:</strong> " + body;
+
+      document.getElementById(pc + "-storedEmailContent").innerHTML = emailContent;
+    }
+
+
+    // function displayEmails(pc) {
+    //   // Get the email list container
+    //   var emailList = document.getElementById(pc + "-emailLinks");
+    //   emailList.innerHTML = '';
+
+    //   // Loop through the emails for the current PC
+    //   emails[pc].forEach(function (email, index) {
+    //     // Create a list item for each email
+    //     var listItem = document.createElement('li');
+    //     // Create a link to trigger display of email content
+    //     var link = document.createElement('a');
+    //     link.href = "#";
+    //     link.textContent = "Email " + (index + 1);
+    //     // Add custom attributes to the link
+    //     link.setAttribute('data-sender', email.sender);
+    //     link.setAttribute('data-recipient', email.recipient);
+    //     link.setAttribute('data-subject', email.subject);
+    //     link.setAttribute('data-body', email.body);
+    //     // Add an event listener to show email details when the link is clicked
+    //     link.addEventListener('click', function () {
+    //       // Retrieve email details from custom attributes
+    //       var sender = link.getAttribute('data-sender');
+    //       var recipient = link.getAttribute('data-recipient');
+    //       var subject = link.getAttribute('data-subject');
+    //       var body = link.getAttribute('data-body');
+    //       // Display email content
+    //       showEmail(pc, sender, recipient, subject, body);
+    //     });
+    //     // Append the link to the list item
+    //     listItem.appendChild(link);
+    //     // Append the list item to the email list container
+    //     emailList.appendChild(listItem);
+    //   });
+    // }
+
+
+
+    // document.getElementById('PC1InboxModal').addEventListener('shown.bs.modal', function () {
+    //   displayEmails('PC1');
+    // });
+
+    // document.getElementById('PC2InboxModal').addEventListener('shown.bs.modal', function () {
+    //   displayEmails('PC2');
+    // });
+
+    // document.getElementById('PC3InboxModal').addEventListener('shown.bs.modal', function () {
+    //   displayEmails('PC3');
+    // });
+
+
+
+
+  </script>
 
 
 
 
 
-      <!-- Loads <model-viewer> for browsers: -->
-      <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
 
-      <!-- Includes a JavaScript module for 3D model viewing -->
-      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- Includes a JavaScript module for 3D model viewing -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-      <!-- Includes the Bootstrap JavaScript library from a CDN -->
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+  <!-- Includes the Bootstrap JavaScript library from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+
 
 
 </body>
