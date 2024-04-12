@@ -1,4 +1,61 @@
 
+.packet-button:hover {
+  /* Set the background color to white on hover */
+  background-color: #ffffff;
+  /* Set the background color on hover */
+
+  /* Set the text color to black on hover */
+  color: #000000;
+  /* Set the text color on hover */
+}
+
+.packet-button {
+  /* Set the background color of the button to transparent */
+  background-color: #ffffff;
+
+  /* Set the text color of the button */
+  color: rgb(59, 0, 101);
+  /* Set the text color */
+
+  /* Add a border to the button with a 2px width and the specified color */
+  border: 2px solid rgb(59, 0, 101);
+  /* Set the border color */
+
+  /* Set the cursor to a pointer to indicate interactivity */
+  cursor: pointer;
+
+  /* Add a smooth transition effect for background color and text color changes */
+  transition: background-color 0.1s ease, color 0.1s ease;
+  /* Add a smooth transition effect */
+
+  /* Apply the 'rainbow' animation with a duration of 3s and infinite repeat */
+  animation: packet_color 10s infinite;
+  /* Add rainbow animation */
+  /* Add rainbow animation */
+}
+
+
+/* Define a keyframe animation named 'rainbow' */
+
+@keyframes packet_color {
+
+
+
+
+  50% {
+    /* Set the color and border color to green */
+    color: red;
+    border-color: red;
+  }
+
+  100% {
+    /* Set the color and border color to green */
+    color: blue;
+    border-color: blue;
+  }
+
+
+}
 
 
 

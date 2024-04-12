@@ -10,16 +10,20 @@ TODO :-
 
 ✔️ change text color to black
 
-add simulation
+Update Home Page
+
+✔️ add simulation
 
 packet images
 
+✔️ change packetcolor
+
 add alert messages
-    -> in start when page loads
-    -> when clicked on send message button
-    -> when click on text copy button
-    -> 
+✔️    -> in start when page loads
+✔️ -> when click on text copy button
+✔️ -> add validation to the form click on send button to to enter subject and message
 
 ✔️ add drop down menu
+
 
 
