@@ -76,6 +76,10 @@
   cursor: pointer;
 }
 
+#documentation , #video{
+  padding: 10px 6px;
+  
+}
 
 
 
@@ -720,7 +724,7 @@ h3 {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 20rem;
+  width: 11rem;
 
   transform: translateY(10px);
   opacity: 0;
@@ -744,7 +748,7 @@ h3 {
 }
 
 .dropdown-link:hover>a {
-  background-color: #000000;
+  background-color: #e1e1e1;
   color: #fff;
 }
 
